@@ -27,61 +27,35 @@ namespace GoogleARCore.Examples.AugmentedImage
     using GoogleARCoreInternal;
     using UnityEngine;
 
-    /// <summary>
-    /// Uses 4 frame corner objects to visualize an AugmentedImage.
-    /// </summary>
     public class AugmentedImageVisualizer : MonoBehaviour
     {
-        /// <summary>
-        /// The AugmentedImage to visualize.
-        /// </summary>
-        public AugmentedImage Image;
+        public AugmentedImage image;
+        public AugmentedImageVisualizer augmentedImageVisualizer;
+        public GameObject level;
 
-        /// <summary>
-        /// A model for the lower left corner of the frame to place when an image is detected.
-        /// </summary>
-        public GameObject FrameLowerLeft;
+        bool hasSpawned = false;
+        Anchor anchor;
 
-        /// <summary>
-        /// A model for the lower right corner of the frame to place when an image is detected.
-        /// </summary>
-        public GameObject FrameLowerRight;
-
-        /// <summary>
-        /// A model for the upper left corner of the frame to place when an image is detected.
-        /// </summary>
-        public GameObject FrameUpperLeft;
-
-        /// <summary>
-        /// A model for the upper right corner of the frame to place when an image is detected.
-        /// </summary>
-        public GameObject FrameUpperRight;
-
-        /// <summary>
-        /// The Unity Update method.
-        /// </summary>
         public void Update()
         {
-            if (Image == null || Image.TrackingState != TrackingState.Tracking)
-            {
-                FrameLowerLeft.SetActive(false);
-                FrameLowerRight.SetActive(false);
-                FrameUpperLeft.SetActive(false);
-                FrameUpperRight.SetActive(false);
+            if (image == null || image.TrackingState != TrackingState.Tracking && !hasSpawned)
                 return;
+                
+            if(!hasSpawned){
+                AddVisualizer(image);
+                hasSpawned = true;
             }
+        }
 
-            float halfWidth = Image.ExtentX / 2;
-            float halfHeight = Image.ExtentZ / 2;
-            FrameLowerLeft.transform.localPosition = (halfWidth * Vector3.left) + (halfHeight * Vector3.back);
-            FrameLowerRight.transform.localPosition = (halfWidth * Vector3.right) + (halfHeight * Vector3.back);
-            FrameUpperLeft.transform.localPosition = (halfWidth * Vector3.left) + (halfHeight * Vector3.forward);
-            FrameUpperRight.transform.localPosition = (halfWidth * Vector3.right) + (halfHeight * Vector3.forward);
+        private void AddVisualizer(AugmentedImage image)
+        {
+            anchor = Session.CreateAnchor(image.CenterPose);
+            GameObject.Instantiate(level, anchor.transform.position, anchor.transform.rotation, anchor.transform);
 
-            FrameLowerLeft.SetActive(true);
-            FrameLowerRight.SetActive(true);
-            FrameUpperLeft.SetActive(true);
-            FrameUpperRight.SetActive(true);
+
+            //var anchor = image.CreateAnchor(image.CenterPose);
+            //var visualizer = Instantiate(augmentedImageVisualizer, anchor.transform);
+            //visualizer.image = image;
         }
     }
 }

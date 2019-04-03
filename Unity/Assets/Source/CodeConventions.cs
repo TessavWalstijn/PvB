@@ -7,7 +7,7 @@ using UnityEngine;
 // • crotchets  => []
 // • brokets    => <>
 
-public class CodeConfentions
+public class CodeConventions
 // Optional class creations:
 //      public class CodeConfentions : MonoBehaviour
 //      public class CodeConfentions : _ClassUsedOnlyHere
@@ -33,7 +33,7 @@ public class CodeConfentions
         int     a, // If we have more then 3 parameters
         float   b, // We will list the parameters like this
         double  c, // We add a TAB to make a differnce between names and types
-        int     d, // We do this to make the parameters more readable
+        int     d  // We do this to make the parameters more readable
     ) {   // We now add the last bracket and the first brace together
 
         int max = 10;
@@ -45,9 +45,11 @@ public class CodeConfentions
                 i % 3 == 0 && // When we use the && we use a different syntax
                 i % 5 == 0    // The syntax is the same as a function with more then 3 params
             ) {   // We now add the last bracket and the first brace together\
-                _test += 1 // We do not use the ++ operator on number types
+                _test += 1; // We do not use the ++ operator on number types
             }
         }
+
+        return max;
     }
 
     // Start is called before the first frame update
@@ -59,7 +61,7 @@ public class CodeConfentions
 
         _Test( // This is more readable for long or a lot of params
             1,
-            2.22,
+            2.22f,
             3456789.0123456789,
             4
         );
