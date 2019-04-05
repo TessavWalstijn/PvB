@@ -3,18 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(LineRenderer))]
-public class BeamTower : Tower
+public class RapidFireTower : Tower
 {
 
     [Header("Shooting")]
-   
-    [SerializeField]
-    protected float _damage;
-    [SerializeField]
-    protected float _tickSpeed;
-    [SerializeField]
-    protected float _minimalShootAngle;
-    private GameObject _target;
+
+
+       private GameObject _target;
     //private Health _enemyHealth;
 
     private float _targetAngle;
@@ -34,35 +29,36 @@ public class BeamTower : Tower
         _lineRenderer.SetPosition(0, transform.position);
     }
 
-    protected override void OnTargetEnter()
+    protected override void _OnTargetEnter()
     {
-        _target = TargetsInRange[0];
+        Debug.Log("Entered");
+        _target = targetsInRange[0];
        // _enemyHealth = _target.GetComponent<Health>();
     }
 
-    protected override bool OnTargetStay()
+    protected override bool _OnTargetStay()
     {
-        if (TargetsInRange.Contains(_target))
+        if (targetsInRange.Contains(_target))
         {
-            RotateToTarget();
+            _RotateToTarget();
             if (_angleWithTarget <= _minimalShootAngle)
             {
                 _lineRenderer.SetPosition(1, _target.transform.position);
                 _lineRenderer.enabled = true;
-                TickDamage();
+               _TickDamage();
             }
             return true;
         }
         return false;
     }
 
-    protected override void OnTargetExit()
+    protected override void _OnTargetExit()
     {
         _target = null;
         _lineRenderer.enabled = false;
     }
 
-    private void RotateToTarget()
+    private void _RotateToTarget()
     {
         // the simple, fast way of rotating
         //transform.LookAt (target.transform.position);
@@ -75,10 +71,10 @@ public class BeamTower : Tower
 
         transform.rotation = Quaternion.Lerp(transform.localRotation,
             Quaternion.Euler(new Vector3(0f, _targetAngle, 0f)),
-            RotationSpeed * Time.deltaTime);
+            rotationSpeed * Time.deltaTime);
     }
 
-    private void TickDamage()
+    private void _TickDamage()
     {
         if (Time.time >= _nextTickTime)
         {
