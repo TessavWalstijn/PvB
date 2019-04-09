@@ -8,7 +8,7 @@ public class Waypoints : MonoBehaviour
     private GameObject[] _waypoints = new GameObject[11];
     public GameObject[] waypoints { get { return _waypoints; } }
 
-    private int[][] _connectionsEnemy = new int[11][];
+    private int[][] _connectionsEnemy = new int[13][];
 
     void Start()
     {
@@ -28,13 +28,14 @@ public class Waypoints : MonoBehaviour
         // ~~ Bottom Road connections
         _connectionsEnemy[6] = new int[] { 7, 8 };
         _connectionsEnemy[7] = new int[] { 8, 9 };
-        _connectionsEnemy[8] = new int[] { 9, 4 };
+        _connectionsEnemy[8] = new int[] { 9, 10 };
+        _connectionsEnemy[8] = new int[] { 10, 4 };
 
         // ~~ Top Road connections
-        _connectionsEnemy[9] = new int[] { 10, 11 };
         _connectionsEnemy[9] = new int[] { 11, 12 };
-        _connectionsEnemy[9] = new int[] { 12, 13 };
-        _connectionsEnemy[9] = new int[] { 13, 3 };
+        _connectionsEnemy[10] = new int[] { 12, 13 };
+        _connectionsEnemy[11] = new int[] { 13, 14 };
+        _connectionsEnemy[12] = new int[] { 14, 3 };
     }
 
     public int[] GetAvailbleEnemyConnections(int waypoint)

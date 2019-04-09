@@ -32,7 +32,7 @@ public class Waypoint : MonoBehaviour
     {
         if (_scriptEnemy.move) return;
 
-        int[] connections = _scriptWaypoints.GetAvailbleConnections(_scriptEnemy.location);
+        int[] connections = _scriptWaypoints.GetAvailbleEnemyConnections(_scriptEnemy.location);
         int max = connections.Length;
         for (int i = 1; i < max; i += 1)
         {

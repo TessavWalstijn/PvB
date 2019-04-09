@@ -39,7 +39,7 @@ public class VisualConnections : MonoBehaviour
     public void ShowAvailbleConnections(int waypoint)
     {
         // Debug.Log(waypoint);
-        int[] connections = _waypoints.GetAvailbleConnections(waypoint);
+        int[] connections = _waypoints.GetAvailbleEnemyConnections(waypoint);
 
         int maxWaypoints = _matirials.Length;
         for (int i = 0; i < maxWaypoints; i += 1)
