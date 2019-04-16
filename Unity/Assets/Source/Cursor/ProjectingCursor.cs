@@ -22,6 +22,7 @@ public class ProjectingCursor : MonoBehaviour {
 			_cursor.SetActive(true);
 			_cursor.transform.position = hit.point;
 			_cursor.transform.up = hit.normal;
+			Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward, Color.green);
 
 			if(hit.transform.gameObject.tag == "Building")
 			{
