@@ -13,18 +13,26 @@ public abstract class Tower : MonoBehaviour
     [SerializeField]
     protected float _minimalShootAngle;
     [SerializeField]
-    protected float targetRadius;
+    protected float _targetRadius;
     [SerializeField]
-    protected float rotationSpeed;
+    protected float _rotationSpeed;
     [SerializeField]
     private LayerMask _layer;
-
     private bool _hasTarget;
     protected List<GameObject> targetsInRange;
 
     protected abstract void _OnTargetEnter();
     protected abstract bool _OnTargetStay();
     protected abstract void _OnTargetExit();
+
+    [Header("RapidfireTurret")]
+    
+    [SerializeField]
+    protected GameObject _bulletPrefab;
+    [SerializeField]
+    protected float _fireRate;
+    [SerializeField]
+    protected float _fireCountDown;
 
     protected virtual void Start()
     {
@@ -33,7 +41,7 @@ public abstract class Tower : MonoBehaviour
 
     protected virtual void Update()
     {
-        var cols = Physics.OverlapSphere(transform.position, targetRadius, _layer);
+        var cols = Physics.OverlapSphere(transform.position, _targetRadius, _layer);
         targetsInRange.Clear();
 
         foreach (var col in cols)
@@ -61,6 +69,6 @@ public abstract class Tower : MonoBehaviour
 
     private void _OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.position, targetRadius);
+        Gizmos.DrawWireSphere(transform.position, _targetRadius);
     }
 }

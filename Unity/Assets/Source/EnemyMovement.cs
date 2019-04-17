@@ -15,7 +15,7 @@ public class EnemyMovement : MonoBehaviour
     private int _waypointIndex;
     private Vector3 _targetPosition;
     private bool _reachedEndOfPath;
-
+    public int _Enemyhealth = 7;
     public int lifeValue = 1;
     private void Awake()
     {
@@ -48,10 +48,10 @@ public class EnemyMovement : MonoBehaviour
                     _reachedEndOfPath = true;
                     print("Reached End Of Path");
                     LifeCountdown.lifes -= lifeValue;
-                    Destroy(gameObject);
                 }
             }
         }
+        
     }
 
     private void FixedUpdate()

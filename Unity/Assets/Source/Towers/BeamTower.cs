@@ -7,8 +7,8 @@ public class BeamTower : Tower
 {
 
     [Header("Shooting")]
-
-
+   
+   
        private GameObject _target;
     //private Health _enemyHealth;
 
@@ -16,7 +16,8 @@ public class BeamTower : Tower
     private float _angleWithTarget;
     private LineRenderer _lineRenderer;
     private float _nextTickTime;
-
+    [SerializeField]   
+    protected GameObject _Enemy;
     private void Awake()
     {
         _lineRenderer = GetComponent<LineRenderer>();
@@ -33,7 +34,7 @@ public class BeamTower : Tower
     {
         Debug.Log("Entered");
         _target = targetsInRange[0];
-       // _enemyHealth = _target.GetComponent<Health>();
+        //_enemyHealth = _target.GetComponent<Health>();
     }
 
     protected override bool _OnTargetStay()
@@ -71,7 +72,7 @@ public class BeamTower : Tower
 
         transform.rotation = Quaternion.Lerp(transform.localRotation,
             Quaternion.Euler(new Vector3(0f, _targetAngle, 0f)),
-            rotationSpeed * Time.deltaTime);
+            _rotationSpeed * Time.deltaTime);
     }
 
     private void _TickDamage()
@@ -81,6 +82,7 @@ public class BeamTower : Tower
             //_enemyHealth.TakeDamage(_damage);
             _nextTickTime = Time.time + _tickSpeed;
             print("Shoot");
+            Destroy(_target);
         }
     }
 }

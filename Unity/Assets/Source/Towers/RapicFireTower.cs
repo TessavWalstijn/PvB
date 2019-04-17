@@ -8,25 +8,18 @@ public class RapidFireTower : Tower
 
     [Header("Shooting")]
 
-
+    [SerializeField]
+    protected GameObject Enemy;
        private GameObject _target;
     //private Health _enemyHealth;
 
     private float _targetAngle;
     private float _angleWithTarget;
-    private LineRenderer _lineRenderer;
     private float _nextTickTime;
-
-    private void Awake()
-    {
-        _lineRenderer = GetComponent<LineRenderer>();
-    }
 
     protected override void Start()
     {
         base.Start();
-        _lineRenderer.enabled = false;
-        _lineRenderer.SetPosition(0, transform.position);
     }
 
     protected override void _OnTargetEnter()
@@ -43,8 +36,6 @@ public class RapidFireTower : Tower
             _RotateToTarget();
             if (_angleWithTarget <= _minimalShootAngle)
             {
-                _lineRenderer.SetPosition(1, _target.transform.position);
-                _lineRenderer.enabled = true;
                _TickDamage();
             }
             return true;
@@ -55,9 +46,11 @@ public class RapidFireTower : Tower
     protected override void _OnTargetExit()
     {
         _target = null;
-        _lineRenderer.enabled = false;
     }
-
+    void _Shoot ()
+	{
+		
+	}
     private void _RotateToTarget()
     {
         // the simple, fast way of rotating
@@ -71,14 +64,15 @@ public class RapidFireTower : Tower
 
         transform.rotation = Quaternion.Lerp(transform.localRotation,
             Quaternion.Euler(new Vector3(0f, _targetAngle, 0f)),
-            rotationSpeed * Time.deltaTime);
+            _rotationSpeed * Time.deltaTime);
     }
 
     private void _TickDamage()
     {
         if (Time.time >= _nextTickTime)
         {
-            //_enemyHealth.TakeDamage(_damage);
+            Destroy(Enemy);
+            //_enemyHealth._takeDamage(_damage);
             _nextTickTime = Time.time + _tickSpeed;
             print("Shoot");
         }
