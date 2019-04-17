@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyMovement1 : MonoBehaviour
 {
     [SerializeField]
     private GameObject _waypoints;

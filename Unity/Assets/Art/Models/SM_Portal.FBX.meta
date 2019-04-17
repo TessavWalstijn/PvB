@@ -19,6 +19,18 @@ ModelImporter:
     100026: Tile1
     100028: Tile2
     100030: Tile3
+    100032: Tile004
+    100034: Tile005
+    100036: Tile006
+    100038: Tile007
+    100040: Tile008
+    100042: Tile009
+    100044: Tile010
+    100046: Tile011
+    100048: Tile012
+    100050: Tile013
+    100052: Tile014
+    100054: Tile015
     400000: PlaneIn
     400002: PortalBase
     400004: PortalBeakDown
@@ -35,6 +47,18 @@ ModelImporter:
     400026: Tile1
     400028: Tile2
     400030: Tile3
+    400032: Tile004
+    400034: Tile005
+    400036: Tile006
+    400038: Tile007
+    400040: Tile008
+    400042: Tile009
+    400044: Tile010
+    400046: Tile011
+    400048: Tile012
+    400050: Tile013
+    400052: Tile014
+    400054: Tile015
     2100000: 'Material #65'
     2100002: No Name
     2300000: PlaneIn
@@ -52,6 +76,18 @@ ModelImporter:
     2300024: Tile1
     2300026: Tile2
     2300028: Tile3
+    2300030: Tile004
+    2300032: Tile005
+    2300034: Tile006
+    2300036: Tile007
+    2300038: Tile008
+    2300040: Tile009
+    2300042: Tile010
+    2300044: Tile011
+    2300046: Tile012
+    2300048: Tile013
+    2300050: Tile014
+    2300052: Tile015
     3300000: PlaneIn
     3300002: PortalBase
     3300004: PortalBeakDown
@@ -67,6 +103,18 @@ ModelImporter:
     3300024: Tile1
     3300026: Tile2
     3300028: Tile3
+    3300030: Tile004
+    3300032: Tile005
+    3300034: Tile006
+    3300036: Tile007
+    3300038: Tile008
+    3300040: Tile009
+    3300042: Tile010
+    3300044: Tile011
+    3300046: Tile012
+    3300048: Tile013
+    3300050: Tile014
+    3300052: Tile015
     4300000: Tile1
     4300002: Tile2
     4300004: PortalCrown
@@ -82,6 +130,18 @@ ModelImporter:
     4300024: PortalEyes
     4300026: PlaneIn
     4300028: Tile3
+    4300030: Tile004
+    4300032: Tile005
+    4300034: Tile006
+    4300036: Tile007
+    4300038: Tile008
+    4300040: Tile009
+    4300042: Tile010
+    4300044: Tile011
+    4300046: Tile012
+    4300048: Tile013
+    4300050: Tile014
+    4300052: Tile015
   externalObjects: {}
   materials:
     importMaterials: 1
