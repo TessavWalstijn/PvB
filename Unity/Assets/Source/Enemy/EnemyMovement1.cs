@@ -23,6 +23,7 @@ public class EnemyMovement1 : MonoBehaviour
 
     void Start ()
     {
+        _waypoints = GameObject.Find("Paths");
         _SetUp();
     }
 

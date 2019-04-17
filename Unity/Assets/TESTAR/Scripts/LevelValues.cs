@@ -7,8 +7,12 @@ public class LevelValues : MonoBehaviour
     [SerializeField] private GameObject _object;
     [SerializeField] private GameObject _base;
     [SerializeField] private GameObject _level;
-    [SerializeField] private GameObject _uiHolder;
+    [SerializeField] private GameObject _menuUIHolder;
+    [SerializeField] private GameObject _inGameUIHolder;
     
+    // voor demo
+    public GameObject enemyholder;
+
     private Slider _rotationSlider;
     private Slider _scaleSlider;
 
@@ -19,6 +23,7 @@ public class LevelValues : MonoBehaviour
    private void Awake()
    {
         _level.SetActive(false);
+        _inGameUIHolder.SetActive(false);
 
         _rotationSlider = GameObject.Find("RotationSlider").GetComponent<Slider>();
         _scaleSlider = GameObject.Find("ScaleSlider").GetComponent<Slider>();
@@ -49,6 +54,9 @@ public class LevelValues : MonoBehaviour
     {
         _level.SetActive(true);
         _base.SetActive(false);
-        _uiHolder.SetActive(false);
+        _menuUIHolder.SetActive(false);
+        _inGameUIHolder.SetActive(true);
+
+        Instantiate(enemyholder, transform.position, transform.rotation);
     }
 }
