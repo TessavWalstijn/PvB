@@ -57,6 +57,8 @@ public class LevelValues : MonoBehaviour
         _menuUIHolder.SetActive(false);
         _inGameUIHolder.SetActive(true);
 
+        GameObject.Find("ARCoreCamera").GetComponent<ProjectingCursor>().scaleModifier = _scaleSlider.value;
+
         Instantiate(enemyholder, transform.position, transform.rotation);
     }
 }

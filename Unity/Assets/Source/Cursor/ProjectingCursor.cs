@@ -1,17 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class ProjectingCursor : MonoBehaviour {
 
 	[SerializeField] private GameObject _towerObject;
+	[SerializeField] private GameObject _level;
+	[SerializeField] private GameObject _selectButton;
+
 	private GameObject _cursor;
 	private bool hitBuilding = false;
+
+	public float scaleModifier;
 
 	void Start()
 	{
 		_cursor = GameObject.Find("CursorHolder");
 		_cursor.SetActive(false);
+
+		_selectButton.SetActive(false);
 	}
 
 	void Update()
@@ -30,10 +36,14 @@ public class ProjectingCursor : MonoBehaviour {
 				_cursor.transform.position = hit.transform.position;
 				_cursor.transform.rotation = hit.transform.rotation;
 				hitBuilding = true;
+
+				_selectButton.SetActive(true);
+				_selectButton.GetComponent<Button>().onClick.AddListener(()=>hit.transform.gameObject.GetComponent<SelectPlot>().EnablePlot());
 			}
 			else
 			{
 				hitBuilding = false;
+				_selectButton.GetComponent<Button>().onClick.RemoveAllListeners();
 			}
 		}
 		else
@@ -41,10 +51,15 @@ public class ProjectingCursor : MonoBehaviour {
 			_cursor.SetActive(false);
 		}
 	}
-
+	/*
 	public void BuildTowerOnCursor()
 	{
 		if(hitBuilding)
-			Instantiate(_towerObject, _cursor.transform.position, _cursor.transform.rotation);
+		{
+			GameObject _newTower = Instantiate(_towerObject, _cursor.transform.position, _cursor.transform.rotation);
+			_newTower.transform.parent = _level.transform;
+			_newTower.transform.localScale = new Vector3(_newTower.transform.localScale.x * scaleModifier, _newTower.transform.localScale.y * scaleModifier, _newTower.transform.localScale.z * scaleModifier);
+		}
 	}
+	*/
 }
