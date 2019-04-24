@@ -10,8 +10,6 @@ public class ProjectingCursor : MonoBehaviour {
 	private GameObject _cursor;
 	private bool hitBuilding = false;
 
-	public float scaleModifier;
-
 	void Start()
 	{
 		_cursor = GameObject.Find("CursorHolder");

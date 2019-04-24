@@ -17,7 +17,7 @@ public class LevelValues : MonoBehaviour
     private Slider _scaleSlider;
 
     private float _sliderRotation;
-    private float _sliderScale;
+    public float sliderScale;
 
 
    private void Awake()
@@ -44,10 +44,10 @@ public class LevelValues : MonoBehaviour
 
    private void SliderScaling(float _value)
    {
-       float delta = _value - _sliderScale;
+       float delta = _value - sliderScale;
        _object.transform.localScale = new Vector3(1,1,1) * _value;
 
-       _sliderScale = _value;
+       sliderScale = _value;
    }
 
     public void AcceptButton()
@@ -57,7 +57,7 @@ public class LevelValues : MonoBehaviour
         _menuUIHolder.SetActive(false);
         _inGameUIHolder.SetActive(true);
 
-        GameObject.Find("ARCoreCamera").GetComponent<ProjectingCursor>().scaleModifier = _scaleSlider.value;
+        //GameObject.Find("ARCoreCamera").GetComponent<ProjectingCursor>().scaleModifier = _scaleSlider.value;
 
         Instantiate(enemyholder, transform.position, transform.rotation);
     }
