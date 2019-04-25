@@ -10,8 +10,11 @@ public class RadialMenuButtons : MonoBehaviour
     [SerializeField] private GameObject _areaOfEffectTower;
     [SerializeField] private GameObject _slowTower;
 
+    [SerializeField] private GameObject _currentTower;
+
     [Header("Spawn Location")]
     [SerializeField] private GameObject _plot;
+    private SelectPlot _plotScript;
 
     [Header("Other Variables")]
     public float scaleModifier;
@@ -19,6 +22,8 @@ public class RadialMenuButtons : MonoBehaviour
     void Start()
     {
         scaleModifier = GameObject.Find("LevelHolder").GetComponent<LevelValues>().sliderScale;
+
+        _plotScript = _plot.GetComponent<SelectPlot>();
     }
 
    public void RadialTopButton()
@@ -27,21 +32,31 @@ public class RadialMenuButtons : MonoBehaviour
        _newRapidFireTower.transform.localScale = new Vector3(_newRapidFireTower.transform.localScale.x * scaleModifier, _newRapidFireTower.transform.localScale.y * scaleModifier, _newRapidFireTower.transform.localScale.z * scaleModifier);
        _newRapidFireTower.transform.parent = _plot.transform;
 
-       transform.GetComponentInParent<SelectPlot>().DisablePlot();
+       _currentTower = _newRapidFireTower;
+
+       _plotScript.GetComponent<SelectPlot>().DisablePlot();
+       _plotScript.GetComponent<SelectPlot>()._plotHasBuilding = true;
    }
 
    public void RadialBottomButton()
    {
-       transform.GetComponentInParent<SelectPlot>().DisablePlot();
+       _plotScript.GetComponent<SelectPlot>().DisablePlot();
    }
 
    public void RadialRightButton()
    {
-       transform.GetComponentInParent<SelectPlot>().DisablePlot();
+       _plotScript.GetComponent<SelectPlot>().DisablePlot();
    }
 
    public void RadialLeftButton()
    {
-       transform.GetComponentInParent<SelectPlot>().DisablePlot();
+       _plotScript.GetComponent<SelectPlot>().DisablePlot();
+   }
+
+   public void BuiltTowerRadialRightButton()
+   {
+       Destroy(_currentTower.gameObject);
+       _plotScript.GetComponent<SelectPlot>().DisablePlot();
+       _plotScript.GetComponent<SelectPlot>()._plotHasBuilding = false;
    }
 }
