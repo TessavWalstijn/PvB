@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: TestAreaSessionConfig
   m_EditorClassIdentifier: 
   MatchCameraFramerate: 1
-  PlaneFindingMode: 0
+  PlaneFindingMode: 2
   EnableLightEstimation: 0
   EnableCloudAnchor: 0
-  AugmentedImageDatabase: {fileID: 11400000, guid: 7bfa292cd365d6d42b844fc0e63069bd,
-    type: 2}
+  AugmentedImageDatabase: {fileID: 0}
   CameraFocusMode: 0
   AugmentedFaceMode: 0
