@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ProjectingCursor : MonoBehaviour {
 
+	[SerializeField] private GameObject _towerObject;
 	private GameObject _cursor;
+	private bool hitBuilding = false;
 
 	void Start()
 	{
@@ -27,15 +29,22 @@ public class ProjectingCursor : MonoBehaviour {
 			{
 				_cursor.transform.position = hit.transform.position;
 				_cursor.transform.rotation = hit.transform.rotation;
-				if(Input.GetKeyDown(KeyCode.Space))
-				{
-					// Functie voor bouwen
-				}
+				hitBuilding = true;
+			}
+			else
+			{
+				hitBuilding = false;
 			}
 		}
 		else
 		{
 			_cursor.SetActive(false);
 		}
+	}
+
+	public void BuildTowerOnCursor()
+	{
+		if(hitBuilding)
+			Instantiate(_towerObject, _cursor.transform.position, _cursor.transform.rotation);
 	}
 }

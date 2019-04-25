@@ -77,7 +77,7 @@ namespace GoogleARCore.Examples.AugmentedImage
                     // Create an anchor to ensure that ARCore keeps tracking this augmented image.
                     Anchor anchor = image.CreateAnchor(image.CenterPose);
                     visualizer = (AugmentedImageVisualizer)Instantiate(AugmentedImageVisualizerPrefab, anchor.transform);
-                    visualizer.image = image;
+                    visualizer.Image = image;
                     m_Visualizers.Add(image.DatabaseIndex, visualizer);
                 }
                 else if (image.TrackingState == TrackingState.Stopped && visualizer != null)
@@ -90,7 +90,7 @@ namespace GoogleARCore.Examples.AugmentedImage
             // Show the fit-to-scan overlay if there are no images that are Tracking.
             foreach (var visualizer in m_Visualizers.Values)
             {
-                if (visualizer.image.TrackingState == TrackingState.Tracking)
+                if (visualizer.Image.TrackingState == TrackingState.Tracking)
                 {
                     FitToScanOverlay.SetActive(false);
                     return;
