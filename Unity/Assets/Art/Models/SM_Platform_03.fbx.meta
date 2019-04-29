@@ -5,11 +5,9 @@ ModelImporter:
   fileIDToRecycleName:
     100000: New_Game_Object_1
     100002: //RootNode
-    100004: SM_Platform_03__1_
     400000: New_Game_Object_1
     400002: //RootNode
-    400004: SM_Platform_03__1_
-    2100000: New_Material
+    2100000: T_Platforms
     2300000: New_Game_Object_1
     3300000: New_Game_Object_1
     4300000: New_Game_Object_1
