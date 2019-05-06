@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class _baseTower : MonoBehaviour
 {
+    
   [Header("LookAt")]
+  private Transform _target;
 
     [SerializeField]
     private GameObject _turretHead;
@@ -18,10 +20,15 @@ public class _baseTower : MonoBehaviour
     [SerializeField]
     protected private int _damage;
     [SerializeField]
-    protected private int _fireRate;
+    protected private float _fireRate;
     [SerializeField]
     protected private int _range;
-
+    
+    [SerializeField]
+    private GameObject _bullet;
+    [SerializeField]
+    protected private Transform _firePoint;
+    protected private float _fireCountdown = 0f;
     void Start() 
     {
          _rapidFire _rapidFire = new _rapidFire();
@@ -36,9 +43,13 @@ public class _baseTower : MonoBehaviour
         {
             _enemy = other.gameObject;
             _turretHead.transform.LookAt(_enemy.transform);
-            Shoot();
-            
+            if(_fireCountdown <= 0f)
+            {
+                Shoot();
+                _fireCountdown = 1f / _fireRate;
+            }
         }
+        _fireCountdown -= Time.deltaTime;
     }
 
     void OnTriggerExit(Collider other)
@@ -49,7 +60,12 @@ public class _baseTower : MonoBehaviour
     protected virtual void Shoot()
     {
        Debug.Log("firing!");
-          
+       GameObject _bulletGO = (GameObject)Instantiate (_bullet, _firePoint.position,_firePoint.rotation);
+       _bullet _Bullet = _bulletGO.GetComponent<_bullet>();
+       
+       
+        if (_Bullet != null)
+                 _Bullet.Chase(_target);
     }
 }
 
