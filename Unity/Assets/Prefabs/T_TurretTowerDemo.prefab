@@ -276,8 +276,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fc710bff9de4d941a9a74edf8c7314a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _turretHead: {fileID: 143}
-  _startRotation: {x: 0, y: 0, z: 0}
+  _target: {fileID: 0}
+  _enemyTag: Enemy
+  _turretHead: {fileID: 170}
+  _turretRange: 0
+  _turnSpeed: 5
 --- !u!1001 &7855244335092853263
 PrefabInstance:
   m_ObjectHideFlags: 0
