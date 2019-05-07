@@ -9,10 +9,11 @@ public class EnemyMovement : MonoBehaviour
 
     [SerializeField]
     private float _speed = 5;
-    private VisualConnections _visual;
     private Transform[] _targets;
     private bool _move = false;
     private int _location = 1;
+
+    private string _side = "left";
 
     public bool move { get { return _move; } }
     
@@ -29,7 +30,14 @@ public class EnemyMovement : MonoBehaviour
 
     void _SetUp()
     {
-        _targets = _waypoints.GetComponent<Waypoints>().GetEnemyRoad((int)Random.Range(0, 3));
+        if (_side == "left") {
+            _targets = _waypoints.GetComponent<Waypoints>().GetEnemyRoad((int)Random.Range(0, 3), "left");
+            _side = "right";
+        } else { 
+            _targets = _waypoints.GetComponent<Waypoints>().GetEnemyRoad((int)Random.Range(0, 3), "right");
+            _side = "left";
+        }
+
         transform.position = _targets[0].position;
         _move = true;
     }
@@ -38,7 +46,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (!_move) return;
 
-        float step = _speed * Time.deltaTime; // calculate distance to move
+        float step = _speed * Time.deltaTime * 0.01f; // calculate distance to move
         transform.position = Vector3.MoveTowards(transform.position, _targets[_location].position, step);
         transform.LookAt(_targets[_location]);
 
