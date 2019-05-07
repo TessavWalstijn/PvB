@@ -7,8 +7,14 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     private GameObject _waypoints;
 
-    [SerializeField]
-    private float _speed = 5;
+    private float _speed = 2;
+    public float speed {
+        set {
+            if (value > 0 && value < 5) {
+                _speed = value;
+            }
+        }
+    }
     private Transform[] _targets;
     private bool _move = false;
     private int _location = 1;
