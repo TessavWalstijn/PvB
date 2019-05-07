@@ -1,12 +1,17 @@
 ﻿using UnityEngine;
 
-public class _bullet : _baseTower
+public class _bullet : MonoBehaviour
 {
+
     private Transform _target;
     protected private float _speed = 70f;
-    public void Chase(Transform _Target)
+     void Start()
     {
-        _target = _Target;
+      _baseTower _enemy = new _baseTower(); 
+    }
+    public void Chase(GameObject _enemy)
+    {
+        _target = _baseTower._enemy;
     }
 
     

@@ -6,11 +6,10 @@ public class _baseTower : MonoBehaviour
 {
     
   [Header("LookAt")]
-  private Transform _target;
 
     [SerializeField]
     private GameObject _turretHead;
-    private GameObject _enemy;
+    public GameObject _enemy;
    
     [SerializeField]
     private  Vector3 _startRotation;
@@ -65,7 +64,7 @@ public class _baseTower : MonoBehaviour
        
        
         if (_Bullet != null)
-                 _Bullet.Chase(_target);
+                 _Bullet.Chase(_enemy);
     }
 }
 
