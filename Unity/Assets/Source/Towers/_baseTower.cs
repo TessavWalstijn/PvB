@@ -9,7 +9,7 @@ public class _baseTower : MonoBehaviour
 
     [SerializeField]
     private GameObject _turretHead;
-    public GameObject _enemy;
+    public static GameObject _enemy;
    
     [SerializeField]
     private  Vector3 _startRotation;
@@ -20,8 +20,6 @@ public class _baseTower : MonoBehaviour
     protected private int _damage;
     [SerializeField]
     protected private float _fireRate;
-    [SerializeField]
-    protected private int _range;
     
     [SerializeField]
     private GameObject _bullet;
@@ -58,13 +56,14 @@ public class _baseTower : MonoBehaviour
     }
     protected virtual void Shoot()
     {
-       Debug.Log("firing!");
        GameObject _bulletGO = (GameObject)Instantiate (_bullet, _firePoint.position,_firePoint.rotation);
        _bullet _Bullet = _bulletGO.GetComponent<_bullet>();
        
-       
-        if (_Bullet != null)
-                 _Bullet.Chase(_enemy);
+        if (_bullet != null)
+        {
+            _Bullet.Chase(_enemy);
+        }
+                 
     }
 }
 
