@@ -11,7 +11,7 @@ public class _bullet : MonoBehaviour
     }
     public void Chase(GameObject _enemy)
     {
-        _target = _baseTower._enemy;
+        //_target = _baseTower._enemy;
     }
 
     
