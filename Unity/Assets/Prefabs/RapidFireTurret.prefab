@@ -4385,10 +4385,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _turretHead: {fileID: 7578912877788712798}
-  _startRotation: {x: 0, y: 0, z: 0}
+  _turnSpeed: 10
+  _enemy: {fileID: 0}
+  enemiesInCollider: []
   _damage: 0
   _fireRate: 5
-  _bullet: {fileID: 5442978577644494569, guid: 21b4dbf3602101a498d699586c01b49c, type: 3}
+  _bullet: {fileID: 29547076359907052, guid: e2d07ae46f0eaa440be8c0409d1c62d1, type: 3}
   _firePoint: {fileID: 7578912879691327490}
 --- !u!135 &7578912878272601501
 SphereCollider:
@@ -15167,7 +15169,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7578912879691327489}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.792, y: 0.242, z: 0.156}
+  m_LocalPosition: {x: 1.259, y: 0.242, z: -0.005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7578912878895972845}
