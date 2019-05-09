@@ -4,13 +4,15 @@ public class _bullet : MonoBehaviour
 {
     private GameObject _target;
     protected private float _speed = 0.3f;
+    [SerializeField] protected GameObject _animprefab;
+
      void Start()
     {
       _baseTower _enemy = new _baseTower(); 
     }
     public void Chase(GameObject _enemy)
     {
-        _target = _baseTower._enemy;
+        _target = _enemy;
         Debug.Log("Chasing");
     }
 
@@ -36,6 +38,7 @@ public class _bullet : MonoBehaviour
     private void HitTarget()
     {
         Debug.Log("Target hit");
+        Instantiate(_animprefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

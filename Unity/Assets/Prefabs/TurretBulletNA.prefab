@@ -1,59 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5136833571103203162
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2816462896906113806}
-  - component: {fileID: 8753601946996136111}
-  m_Layer: 0
-  m_Name: T_A_TurretBullet
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2816462896906113806
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5136833571103203162}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1472.5613, y: 1569.1108, z: -3654.5156}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
-  m_Children:
-  - {fileID: 2343716270360883188}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8753601946996136111
+--- !u!114 &4134750436557546533
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5136833571103203162}
+  m_GameObject: {fileID: 29547076359907052}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0cca5eec7c240c439a16bfb988155aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 8feb9352ec5d1ce4aae9f4cf08cadad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &2343716270361277804
+  _animprefab: {fileID: 5136833571103203162, guid: 544bebd122b111b4da04758a2eb0b71f,
+    type: 3}
+--- !u!1001 &29547076359872596
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2816462896906113806}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 100024, guid: 1014b5ed8a9924446b3d723daba3b069, type: 3}
       propertyPath: m_Name
-      value: T_A_TurretBullet
+      value: TurretBulletNA
       objectReference: {fileID: 0}
     - target: {fileID: 400024, guid: 1014b5ed8a9924446b3d723daba3b069, type: 3}
       propertyPath: m_LocalPosition.x
@@ -98,6 +68,18 @@ PrefabInstance:
     - target: {fileID: 400024, guid: 1014b5ed8a9924446b3d723daba3b069, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400024, guid: 1014b5ed8a9924446b3d723daba3b069, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 400024, guid: 1014b5ed8a9924446b3d723daba3b069, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 400024, guid: 1014b5ed8a9924446b3d723daba3b069, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: 1014b5ed8a9924446b3d723daba3b069, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -297,9 +279,9 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1f375be4a8d351e489e713118048c00d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1014b5ed8a9924446b3d723daba3b069, type: 3}
---- !u!4 &2343716270360883188 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400024, guid: 1014b5ed8a9924446b3d723daba3b069,
+--- !u!1 &29547076359907052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100024, guid: 1014b5ed8a9924446b3d723daba3b069,
     type: 3}
-  m_PrefabInstance: {fileID: 2343716270361277804}
+  m_PrefabInstance: {fileID: 29547076359872596}
   m_PrefabAsset: {fileID: 0}
