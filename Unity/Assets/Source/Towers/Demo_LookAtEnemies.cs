@@ -27,7 +27,7 @@ public class Demo_LookAtEnemies : MonoBehaviour
         foreach(GameObject enemy in enemiesInCollider)
         {
             float _distanceToNearestEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-            if(_distanceToNearestEnemy < shortestDistance)
+            if(_distanceToNearestEnemy < shortestDistance && nearestEnemy == null)
             {
                 shortestDistance = _distanceToNearestEnemy;
                 nearestEnemy = enemy;
