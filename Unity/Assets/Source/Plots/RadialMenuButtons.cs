@@ -28,14 +28,7 @@ public class RadialMenuButtons : MonoBehaviour
 
    public void RadialTopButton()
    {
-       GameObject _newRapidFireTower = Instantiate(_rapidFireTower, _plot.transform.position, _plot.transform.rotation);
-       _newRapidFireTower.transform.localScale = new Vector3(_newRapidFireTower.transform.localScale.x * scaleModifier, _newRapidFireTower.transform.localScale.y * scaleModifier, _newRapidFireTower.transform.localScale.z * scaleModifier);
-       _newRapidFireTower.transform.parent = _plot.transform;
-
-       _currentTower = _newRapidFireTower;
-
-       _plotScript.GetComponent<SelectPlot>().DisablePlot();
-       _plotScript.GetComponent<SelectPlot>()._plotHasBuilding = true;
+       InstantiateTower(_rapidFireTower);
    }
 
    public void RadialBottomButton()
@@ -50,7 +43,7 @@ public class RadialMenuButtons : MonoBehaviour
 
    public void RadialLeftButton()
    {
-       _plotScript.GetComponent<SelectPlot>().DisablePlot();
+       InstantiateTower(_areaOfEffectTower);
    }
 
    public void BuiltTowerRadialRightButton()
@@ -58,5 +51,17 @@ public class RadialMenuButtons : MonoBehaviour
        Destroy(_currentTower.gameObject);
        _plotScript.GetComponent<SelectPlot>().DisablePlot();
        _plotScript.GetComponent<SelectPlot>()._plotHasBuilding = false;
+   }
+
+   private void InstantiateTower(GameObject tower)
+   {
+        GameObject _newRapidFireTower = Instantiate(tower, _plot.transform.position, _plot.transform.rotation);
+        _newRapidFireTower.transform.localScale = new Vector3(_newRapidFireTower.transform.localScale.x * scaleModifier, _newRapidFireTower.transform.localScale.y * scaleModifier, _newRapidFireTower.transform.localScale.z * scaleModifier);
+        _newRapidFireTower.transform.parent = _plot.transform;
+
+        _currentTower = _newRapidFireTower;
+
+       _plotScript.GetComponent<SelectPlot>().DisablePlot();
+       _plotScript.GetComponent<SelectPlot>()._plotHasBuilding = true;
    }
 }

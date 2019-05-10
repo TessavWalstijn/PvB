@@ -7,6 +7,8 @@ TagManager:
   - Path
   - lifes
   - Enemy
+  - ManipulationSystem
+  - Building
   layers:
   - Default
   - TransparentFX
@@ -43,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Cursor
+    uniqueID: 2046515513
     locked: 0
