@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869657e75d20ad244915164fcec1a00a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waypoints: {fileID: 0}
-  _speed: 2
+  _waypoints: {fileID: 1385606660316229281, guid: 47b7bcd13c8ab3947af166920110948c,
+    type: 3}
 --- !u!1001 &2058690623783055495
 PrefabInstance:
   m_ObjectHideFlags: 0

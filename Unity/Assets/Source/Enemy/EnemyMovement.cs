@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject _waypoints;
-
     private float _speed = 2;
     public float speed {
         set {
@@ -16,45 +13,29 @@ public class EnemyMovement : MonoBehaviour
         }
     }
     private Transform[] _targets;
-    private bool _move = false;
     private int _location = 1;
+    private bool _move = false;
 
     private string _side = "left";
 
-    public bool move { get { return _move; } }
-    
-    // public void Start()
-    // {
-    //     // _visual = _waypoints.GetComponent<VisualConnections>();
-    // }
-
-    void Start ()
-    {
-        _waypoints = GameObject.Find("Paths");
-        _SetUp();
-    }
-
-    void _SetUp()
-    {
-        if (_side == "left") {
-            _targets = _waypoints.GetComponent<Waypoints>().GetEnemyRoad((int)Random.Range(0, 3), "left");
-            _side = "right";
-        } else { 
-            _targets = _waypoints.GetComponent<Waypoints>().GetEnemyRoad((int)Random.Range(0, 3), "right");
-            _side = "left";
-        }
-
-        transform.position = _targets[0].position;
-        _move = true;
-    }
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
+    {
+        Move();
+    }
+
+    private void Move ()
     {
         if (!_move) return;
 
         float step = _speed * Time.deltaTime * 0.01f; // calculate distance to move
         transform.position = Vector3.MoveTowards(transform.position, _targets[_location].position, step);
         transform.LookAt(_targets[_location]);
+        // Vector3 direction = transform.position - _targets[_location].position;
+        // Quaternion toRotation = Quaternion.FromToRotation(transform.forward, direction);
+        // transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, _speed * Time.time);
+
+        // Vector3.Lerp()
 
         if (Vector3.Distance(transform.position, _targets[_location].position) < 0.000001f)
         {
@@ -62,9 +43,16 @@ public class EnemyMovement : MonoBehaviour
 
             if (_location >= _targets.Length) {
                 _location = 1;
-                _move = false;
-                _SetUp();
+
+                // !! Start attek base
+                Destroy(gameObject);
             }
         }
+    }
+
+    public void SetUp(Transform[] targets)
+    {
+        _targets = targets;
+        _move = true;
     }
 }
