@@ -294,7 +294,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-159574
+  m_Name: pb_Mesh-9766
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -705,6 +705,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2536613725533764799, guid: c66ee467c3364c84bbccfb4a245c8bda,
         type: 3}
+    - target: {fileID: 913080483860919419, guid: 7e923d726969b084a9b80a239a0a9a08,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.23217
+      objectReference: {fileID: 0}
+    - target: {fileID: 913080483860919419, guid: 7e923d726969b084a9b80a239a0a9a08,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.286343
+      objectReference: {fileID: 0}
+    - target: {fileID: 913080483860919419, guid: 7e923d726969b084a9b80a239a0a9a08,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.31868213
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e923d726969b084a9b80a239a0a9a08, type: 3}
 --- !u!1 &454523981 stripped
@@ -776,7 +791,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-160084
+  m_Name: pb_Mesh-10276
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1020,7 +1035,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-159930
+  m_Name: pb_Mesh-10122
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1296,7 +1311,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-159856
+  m_Name: pb_Mesh-10048
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1502,7 +1517,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-159978
+  m_Name: pb_Mesh-10170
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
