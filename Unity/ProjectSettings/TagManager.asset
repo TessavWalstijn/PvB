@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - ManipulationSystem
   - Building
+  - Tower
   layers:
   - Default
   - TransparentFX

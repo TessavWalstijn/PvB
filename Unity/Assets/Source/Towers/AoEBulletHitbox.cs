@@ -9,11 +9,13 @@ public class AoEBulletHitbox : MonoBehaviour
     {
         if(other.gameObject.tag == "Enemy")
         {
-            //Destroy(other.gameObject);
             Debug.Log(damage);
 
-            List<GameObject> enemyList = transform.GetComponentInParent<_baseTower>().enemiesInCollider;
-            enemyList.Remove(other.gameObject);
+            other.GetComponent<Health>().currentHealth -= damage;
+            Debug.Log(other.GetComponent<Health>().currentHealth);
+            
+            //List<GameObject> enemyList = transform.GetComponentInParent<_baseTower>().enemiesInCollider;
+            //enemyList.Remove(other.gameObject);
         }
     }
 }

@@ -39,7 +39,7 @@ public class _bullet : MonoBehaviour
     }
     private void HitTarget()
     {
-        Debug.Log(damage);
+        _target.GetComponent<Health>().currentHealth -= damage;
         Instantiate(_animprefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
