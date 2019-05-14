@@ -3,14 +3,16 @@ guid: a062d81897522764da9c4ff2a35054ab
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: New_Game_Object_10
-    100002: //RootNode
-    400000: New_Game_Object_10
-    400002: //RootNode
+    100000: //RootNode
+    100002: SM_Platform_02__1_
+    100004: SM_Platform_05
+    400000: //RootNode
+    400002: SM_Platform_02__1_
+    400004: SM_Platform_05
     2100000: T_Platforms
-    2300000: New_Game_Object_10
-    3300000: New_Game_Object_10
-    4300000: New_Game_Object_10
+    2300000: SM_Platform_05
+    3300000: SM_Platform_05
+    4300000: SM_Platform_05
   externalObjects: {}
   materials:
     importMaterials: 1

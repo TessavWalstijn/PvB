@@ -142,7 +142,17 @@ ModelImporter:
     4300048: Tile013
     4300050: Tile014
     4300052: Tile015
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #65'
+    second: {fileID: 2100000, guid: 65916e7b519821d4c969cf5fb04cbaf6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: b24f7ed7a39dd7d4f94a70ce689fbc31, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
