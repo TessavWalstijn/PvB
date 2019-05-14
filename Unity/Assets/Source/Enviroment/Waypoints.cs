@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Waypoints : MonoBehaviour
 {
+    // All locations of the enemy road.
     [SerializeField]
     private GameObject[] _waypoints = new GameObject[15];
+    public GameObject[] waypoints { get { return _waypoints; } }
 
+    //#region Number configuration for the roads
     [SerializeField]
     private int[] _topRoadL = new int[8];
     [SerializeField]
@@ -21,42 +24,11 @@ public class Waypoints : MonoBehaviour
     private int[] _botRoadL = new int[7];
     [SerializeField]
     private int[] _botRoadR = new int[7];
- 
-    private int[][] _connectionsEnemy = new int[13][];
-
-    public GameObject[] waypoints { get { return _waypoints; } }
-
-    void Start()
-    {
-        // ~~ ALLOWED CONNECTIONS:
-        // ~~ Array format: [A, B, ...[B]]
-        // ~~ A = Enemy location
-        // ~~ B = Allowed movement
-
-        // ~~ Main Road connections
-        // _connectionsEnemy[0] = new int[] { 0, 1 };
-        // _connectionsEnemy[1] = new int[] { 1, 2 };
-        // _connectionsEnemy[2] = new int[] { 2, 3 };
-        // _connectionsEnemy[3] = new int[] { 3, 4 };
-        // _connectionsEnemy[4] = new int[] { 4, 5 };
-        // _connectionsEnemy[5] = new int[] { 5, 6 };
-
-        // ~~ Bottom Road connections
-        // _connectionsEnemy[6] = new int[] { 7, 8 };
-        // _connectionsEnemy[7] = new int[] { 8, 9 };
-        // _connectionsEnemy[8] = new int[] { 9, 10 };
-        // _connectionsEnemy[8] = new int[] { 10, 4 };
-
-        // ~~ Top Road connections
-        // _connectionsEnemy[9] = new int[] { 11, 12 };
-        // _connectionsEnemy[10] = new int[] { 12, 13 };
-        // _connectionsEnemy[11] = new int[] { 13, 14 };
-        // _connectionsEnemy[12] = new int[] { 14, 3 };
-    }
+    //#endregion
 
     /**
      * <summary>
-     * 
+     * Vigures out the requested road.
      * </summary>
      * <param name="road">[int] Give the number of the road: "top = 1", "main = 0" or "bot = 2"</param>
      * <param name="side">[string] Give the name of the side "left" or "right"</param>
@@ -87,6 +59,13 @@ public class Waypoints : MonoBehaviour
         }
     }
 
+    /**
+     * <summary>
+     * Collects the locations of the road.
+     * </summary>
+     * <param name="path">[int[]] numbers representing locations</param>
+     * <returns>[Transform[]] Locations</returns>
+     */
     private Transform[] _Road(int[] path)
     {
         int length = path.Length;
@@ -98,18 +77,4 @@ public class Waypoints : MonoBehaviour
 
         return road;
     }
-
-    // public int[] GetAvailbleEnemyConnections(int waypoint)
-    // {
-    //     int max = _connectionsEnemy.Length;
-    //     for (int i = 0; i < max; i += 1)
-    //     {
-    //         int[] currentConnections = _connectionsEnemy[i];
-    //         if (waypoint == currentConnections[0])
-    //         {
-    //             return currentConnections;
-    //         }
-    //     }
-    //     return new int[] { waypoint };
-    // }
 }
