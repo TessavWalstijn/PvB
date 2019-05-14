@@ -4,38 +4,42 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    private float _speed = 2;
-    public float speed {
-        set {
-            if (value > 0 && value < 5) {
-                _speed = value;
-            }
-        }
-    }
+    [SerializeField]
+    private GameObject _waypoints;
+
+    [SerializeField]
+    private float _speed = 5;
+    private VisualConnections _visual;
     private Transform[] _targets;
-    private int _location = 1;
     private bool _move = false;
+    private int _location = 1;
 
-    private string _side = "left";
+    public bool move { get { return _move; } }
+    
+    // public void Start()
+    // {
+    //     // _visual = _waypoints.GetComponent<VisualConnections>();
+    // }
 
-    // Update is called once per frame
-    void Update()
+    void Start ()
     {
-        Move();
+        _SetUp();
     }
 
-    private void Move ()
+    void _SetUp()
+    {
+        _targets = _waypoints.GetComponent<Waypoints>().GetEnemyRoad((int)Random.Range(0, 3));
+        transform.position = _targets[0].position;
+        _move = true;
+    }
+    // Update is called once per frame
+    void FixedUpdate()
     {
         if (!_move) return;
 
-        float step = _speed * Time.deltaTime * 0.01f; // calculate distance to move
+        float step = _speed * Time.deltaTime; // calculate distance to move
         transform.position = Vector3.MoveTowards(transform.position, _targets[_location].position, step);
         transform.LookAt(_targets[_location]);
-        // Vector3 direction = transform.position - _targets[_location].position;
-        // Quaternion toRotation = Quaternion.FromToRotation(transform.forward, direction);
-        // transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, _speed * Time.time);
-
-        // Vector3.Lerp()
 
         if (Vector3.Distance(transform.position, _targets[_location].position) < 0.000001f)
         {
@@ -43,16 +47,9 @@ public class EnemyMovement : MonoBehaviour
 
             if (_location >= _targets.Length) {
                 _location = 1;
-
-                // !! Start attek base
-                Destroy(gameObject);
+                _move = false;
+                _SetUp();
             }
         }
-    }
-
-    public void SetUp(Transform[] targets)
-    {
-        _targets = targets;
-        _move = true;
     }
 }
