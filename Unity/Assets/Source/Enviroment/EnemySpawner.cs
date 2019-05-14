@@ -7,102 +7,97 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private int _waves = 0;
 
-    // private int _waveIncremention = 1.2;
-
+    // Spawn time in seconds
     [SerializeField]
     private float _spawnTime = 2;
 
+    //#region Wave events
+    // Triggers an event if the wave hits that number
+    // - Lanes
     [SerializeField]
     private int _unlockTopLane = 2;
     [SerializeField]
     private int _unlockBotLane = 6;
     [SerializeField]
+    // - Enemies
     private int _unlockMidiumEnemy = 4;
     [SerializeField]
     private int _unlockHeavyEnemy = 8;
+    [SerializeField]
+    private int _winGame = 10;
+    //#endregion
 
+    //#region Wave variables.
+    // Keep track of the wave.
     private double _maxEnemiesWave = 0;
     private int _totalEnemiesWave = 0;
+    //#endregion
+
     private int _laneSpawning = 0;
 
+    // If top road is unlocked
     private bool _topRoad = false;
+    // If bot road is unlocked
     private bool _botRoad = false;
+    // If the game hits the final wave no more enemy spawns
+    private bool _finalWave = false;
+
+    // Type if or where enemy spawns
     private enum spawning { None, Top, Main, Bot };
     private Waypoints _roads;
 
+    // Where an enemy spawns at the left side
     [SerializeField]
     private spawning[] _left;
 
+    // Where an enemy spawns at the right side
     [SerializeField]
     private spawning[] _right;
 
+    // Light enemy to spawn in the map
     [SerializeField]
     private GameObject _lightEnemy;
 
+    // Midium enemy to spawn in the map
     [SerializeField]
     private GameObject _midiumEnemy;
 
+    // Heavy enemy to spawn in the map
     [SerializeField]
     private GameObject _heavyEnemy;
 
+    /**
+     * <summary>
+     * Awake is called when the script instance is being loaded.
+     * </summary>
+     */
     void Awake()
     {
         _SetNewWave();
         _roads = gameObject.GetComponent<Waypoints>();
-        StartCoroutine(_SpawnRoutine(_spawnTime));
-
         // _GetPathLength();
     }
-    
-    private void _GetPathLength ()
+
+    /**
+     * <summary>
+     * Start is called before the first frame update
+     * </summary>
+     */
+    void Start()
     {
-        Transform[] leftTop = _roads.GetEnemyRoad(1, "left");
-        Transform[] rightTop = _roads.GetEnemyRoad(1, "right");
-        Transform[] leftMain = _roads.GetEnemyRoad(0, "left");
-        Transform[] rightMain = _roads.GetEnemyRoad(0, "right");
-        Transform[] leftBot = _roads.GetEnemyRoad(2, "left");
-        Transform[] rightBot = _roads.GetEnemyRoad(2, "right");
-
-        float distanceLeftTop = 0;
-        float distanceRightTop = 0;
-        float distanceLeftMain = 0;
-        float distanceRightMain = 0;
-        float distanceLeftBot = 0;
-        float distanceRightBot = 0;
-
-        for (int i = 0; i < 9; i += 1) {
-            distanceLeftTop += Vector3.Distance(leftTop[i].transform.position, leftTop[i+1].transform.position);
-        }
-
-        for (int i = 0; i < 9; i += 1) {
-            distanceRightTop += Vector3.Distance(rightTop[i].transform.position, rightTop[i+1].transform.position);
-        }
-
-        for (int i = 0; i < 6; i += 1) {
-            distanceLeftMain += Vector3.Distance(leftMain[i].transform.position, leftMain[i+1].transform.position);
-        }
-
-        for (int i = 0; i < 9; i += 1) {
-            distanceRightMain += Vector3.Distance(rightMain[i].transform.position, rightMain[i+1].transform.position);
-        }
-
-        // for (int i = 0; i < 10; i += 1) {
-        //     distanceLeftBot += Vector3.Distance(leftBot[i].transform.position, leftBot[i+1].transform.position);
-        // }
-
-        // for (int i = 0; i < 10; i += 1) {
-        //     distanceRightBot += Vector3.Distance(rightBot[i].transform.position, rightBot[i+1].transform.position);
-        // }
-
-        Debug.Log("\n" + distanceLeftMain + " <- main\n" + distanceLeftTop + " <- top");
-        Debug.Log("\n" + distanceRightMain + " <- main\n" + distanceRightTop + " <- top");
-        // Debug.Log("\n" + distanceLeftMain + " <- main\n" + distanceLeftBot + "<- left");
-        // Debug.Log("\n" + distanceRightMain + " <- main\n" + distanceRightBot + "<- right");
+        StartCoroutine(_SpawnRoutine(_spawnTime));
     }
 
+    /**
+     * <summary>
+     * Spawns an enemy with the path and side it needs to walk on.
+     * </summary>
+     * <param name="path">The number of the path it walks on.</param>
+     * <param name="side">The name of the side it walks on.</param>
+     */
     private void _SpawnEnemy (int path, string side)
     {
-        _totalEnemiesWave += 1;
+        _totalEnemiesWave += 3;
         Transform[] road = _roads.GetEnemyRoad(path, side);
 
         GameObject enemy = Instantiate(_lightEnemy, road[0].position, road[0].rotation);
@@ -113,19 +108,36 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+    /**
+     * <summary>
+     * Calculates and unlocks the new wave perks
+     * </summary>
+     */
     private void _SetNewWave ()
     {
-        _totalEnemiesWave = 0;
+        _totalEnemiesWave = 1;
         _maxEnemiesWave = (5 * (_waves ^ 2) + 50 * _waves + 100) * 0.2;
         _waves++;
 
-        if (_waves >= _unlockTopLane) { _topRoad = true; }
-        if (_waves >= _unlockBotLane) { _botRoad = true; }
+        if (_waves == _unlockTopLane) { _topRoad = true; }
+        if (_waves == _unlockBotLane) { _botRoad = true; }
+        if (_waves == _winGame) {
+            Debug.Log("Waves ended");
+            _finalWave = true;
+        }
     }
 
+    /**
+     * <summary>
+     * IEnumarator that handels the spawn interfal.
+     * </summary>
+     * <param name="time">Seconds for the next enemy spawn</param>
+     * <returns></returns>
+     */
     private IEnumerator _SpawnRoutine (float time)
     {
-        while (true)
+        // Stops if the game is won!
+        while (!_finalWave)
         {
             yield return new WaitForSeconds(time);
             
