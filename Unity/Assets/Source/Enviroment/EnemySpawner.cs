@@ -119,11 +119,11 @@ public class EnemySpawner : MonoBehaviour
         _maxEnemiesWave = (5 * (_waves ^ 2) + 50 * _waves + 100) * 0.2;
         _waves++;
 
-        if (_waves = _unlockTopLane) { _topRoad = true; }
-        if (_waves = _unlockBotLane) { _botRoad = true; }
-        if (_waves = _winGame) {
+        if (_waves == _unlockTopLane) { _topRoad = true; }
+        if (_waves == _unlockBotLane) { _botRoad = true; }
+        if (_waves == _winGame) {
             Debug.Log("Waves ended");
-            _gameWon = true;
+            _finalWave = true;
         }
     }
 
