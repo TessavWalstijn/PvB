@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using GoogleARCore;
 
+// Script voor het visualizeren van de Grid op een oppervlakte, gemaakt door Google
+
 public class GridVisualizer : MonoBehaviour
 {
     private static int s_PlaneCount = 0;

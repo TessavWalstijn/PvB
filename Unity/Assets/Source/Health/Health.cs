@@ -3,18 +3,21 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    // Integer om bij te houden hoeveel levenspunten de vijand heeft
     public int currentHealth;
-    public bool objectIsDead = false;
+    // Boolean die registreert of de vijand levend of dood is
+    private bool objectIsDead = false;
 
     void Update()
     {
         if(currentHealth <= 0)
         {
+            // De functie aanroepen wanneer de levenspunten op nul of lager komen
             RemoveGameObjectFromList();
         }
     }
 
-    void RemoveGameObjectFromList()
+    void RemoveGameObjectFromList()     // Functie die aangeeft of de vijand vernietigd kan worden
     {
         objectIsDead = true;
 
@@ -23,17 +26,16 @@ public class Health : MonoBehaviour
 
     void Death()
     {
-        Destroy(gameObject);
+        Destroy(gameObject);        // Verwijderd het gameobject van de scene
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerStay(Collider other)      // Functie om te registreren of er een object in de collider blijft
     {
-        if(other.gameObject.tag == "Tower")
+        if(other.gameObject.tag == "Tower")     // Checkt of er objecten in de collider zitten met de tag: Tower
         {
-            Debug.Log("Enemy staat in range van: " + other.gameObject.name);
             if(objectIsDead)
             {
-                Debug.Log(other.GetComponent<_baseTower>().enemiesInCollider.Count);
+                // Als het gameobject levenspunten heeft van 0 of lager, verwijder dit object uit de lijst van geregistreerde vijanden van de torens die de vijand gezien hebben
                 other.GetComponent<_baseTower>().enemiesInCollider.Remove(gameObject);
             }
         }

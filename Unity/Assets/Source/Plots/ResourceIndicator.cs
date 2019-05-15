@@ -13,5 +13,10 @@ public class ResourceIndicator : MonoBehaviour
     void Update()
     {
         loadingBar.fillAmount += 0.005f;
+
+        if(loadingBar.fillAmount == 1)
+        {
+            loadingBar.fillAmount = 0;
+        }
     }
 }

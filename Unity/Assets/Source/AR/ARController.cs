@@ -81,9 +81,4 @@ public class ARController : MonoBehaviour
             _levelIsActive = true;
         }
     }
-
-    public void DisableGrid()
-    {
-        _gridPrefab.SetActive(false);
-    }
 }

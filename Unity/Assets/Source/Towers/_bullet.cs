@@ -10,6 +10,8 @@ public class _bullet : MonoBehaviour
     void Start()
     {
       _baseTower _enemy = new _baseTower(); 
+
+        Destroy(gameObject, 4f);
     }
 
     public void Chase(GameObject _enemy)

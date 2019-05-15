@@ -70,7 +70,7 @@ public class _baseTower : MonoBehaviour
             return;
         }
 
-        Vector3 dir = _enemy.transform.position - transform.position;
+        Vector3 dir = _enemy.transform.position - _turretHead.transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Quaternion rotation = Quaternion.Lerp(_turretHead.transform.rotation, lookRotation, Time.deltaTime * _turnSpeed);
         _turretHead.transform.rotation = rotation;
