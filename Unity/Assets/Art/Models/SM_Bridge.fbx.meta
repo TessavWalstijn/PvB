@@ -9,28 +9,53 @@ ModelImporter:
     100006: pillar7
     100008: pillar8
     100010: //RootNode
+    100012: SM_FryerBridge
+    100014: SM_FryerBridge8
+    100016: SM_FryerBridge88
+    100018: transform1
+    100020: transform2
+    100022: SM_FryerBridge 1
+    100024: SM_FryerPillar
     400000: pCube16
     400002: pillar1
     400004: pillar6
     400006: pillar7
     400008: pillar8
     400010: //RootNode
+    400012: SM_FryerBridge
+    400014: SM_FryerBridge8
+    400016: SM_FryerBridge88
+    400018: transform1
+    400020: transform2
+    400022: SM_FryerBridge 1
+    400024: SM_FryerPillar
     2100000: lambert1
+    2100002: Bridge1
+    2100004: Pillars
     2300000: pCube16
     2300002: pillar1
     2300004: pillar6
     2300006: pillar7
     2300008: pillar8
+    2300010: SM_FryerBridge88
+    2300012: SM_FryerBridge 1
+    2300014: SM_FryerPillar
     3300000: pCube16
     3300002: pillar1
     3300004: pillar6
     3300006: pillar7
     3300008: pillar8
+    3300010: SM_FryerBridge88
+    3300012: SM_FryerBridge 1
+    3300014: SM_FryerPillar
     4300000: pillar7
     4300002: pillar8
     4300004: pCube16
     4300006: pillar6
     4300008: pillar1
+    4300010: SM_FryerBridge88
+    4300012: SM_FryerBridge
+    4300014: SM_FryerPillar
   externalObjects: {}
   materials:
     importMaterials: 1
