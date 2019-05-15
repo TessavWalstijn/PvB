@@ -8,13 +8,19 @@ public class Waypoints : MonoBehaviour
     private GameObject[] _waypoints = new GameObject[15];
 
     [SerializeField]
-    private int[] _topRoad = new int[8];
+    private int[] _topRoadL = new int[8];
+    [SerializeField]
+    private int[] _topRoadR = new int[8];
 
     [SerializeField]
-    private int[] _mainRoad = new int[7];
+    private int[] _mainRoadL = new int[7];
+    [SerializeField]
+    private int[] _mainRoadR = new int[7];
 
     [SerializeField]
-    private int[] _botRoad = new int[7];
+    private int[] _botRoadL = new int[7];
+    [SerializeField]
+    private int[] _botRoadR = new int[7];
  
     private int[][] _connectionsEnemy = new int[13][];
 
@@ -53,18 +59,31 @@ public class Waypoints : MonoBehaviour
      * 
      * </summary>
      * <param name="road">[int] Give the number of the road: "top = 1", "main = 0" or "bot = 2"</param>
+     * <param name="side">[string] Give the name of the side "left" or "right"</param>
      * <returns>[Transform[]] Locations to walk through</returns>
      */
-    public Transform[] GetEnemyRoad (int road)
+    public Transform[] GetEnemyRoad (int road, string side)
     {
-        switch (road) {
-            case 1: 
-                return _Road(_topRoad);
-            default:
-            case 0: 
-                return _Road(_mainRoad);
-            case 2:
-                return _Road(_botRoad);
+        if (side == "left") {
+            switch (road) {
+                case 1: 
+                    return _Road(_topRoadL);
+                default:
+                case 0: 
+                    return _Road(_mainRoadL);
+                case 2:
+                    return _Road(_botRoadL);
+            }
+        } else {
+            switch (road) {
+                case 1: 
+                    return _Road(_topRoadR);
+                default:
+                case 0: 
+                    return _Road(_mainRoadR);
+                case 2:
+                    return _Road(_botRoadR);
+            }
         }
     }
 

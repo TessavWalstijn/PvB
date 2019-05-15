@@ -20,7 +20,6 @@ public class Waypoint : MonoBehaviour
     private Transform _visual;
     private EnemyMovement _scriptEnemy;
     private Waypoints _scriptWaypoints;
-    private VisualConnections _scriptVisual;
 
 
     void Start ()
