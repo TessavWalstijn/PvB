@@ -12,7 +12,22 @@ ModelImporter:
     3300000: //RootNode
     4300000: House_01
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roof_01
+    second: {fileID: 2100000, guid: fa5f21c413caa8b499138875d279658a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roof_Pillar
+    second: {fileID: 2100000, guid: b36a77cb6ed096f4aa6900c94d7f4120, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Walls
+    second: {fileID: 2100000, guid: 73fde89cfa30ae847b9d54b0b74fbbd3, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

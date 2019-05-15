@@ -11,7 +11,12 @@ ModelImporter:
     2300000: KELLOC
     3300000: KELLOC
     4300000: KELLOC
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KELLOCMat
+    second: {fileID: 2100000, guid: 6467ac2644eec144381fcbdadfc31e75, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
