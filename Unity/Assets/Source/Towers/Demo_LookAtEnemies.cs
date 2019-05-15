@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Demo_LookAtEnemies : MonoBehaviour
 {
@@ -18,7 +16,6 @@ public class Demo_LookAtEnemies : MonoBehaviour
     {
         if(other.gameObject.tag == "Enemy")
         {
-            Debug.Log("Enemy spotted");
             _enemy = other.gameObject;
             _turretHead.transform.LookAt(_enemy.transform);
         }
@@ -26,7 +23,6 @@ public class Demo_LookAtEnemies : MonoBehaviour
     
     void OnTriggerExit(Collider other)
     {
-        Debug.Log("Enemy Left");
         _enemy = null;
         _turretHead.transform.localRotation = Quaternion.Euler(_startRotation.x, _startRotation.y, _startRotation.z);
     }

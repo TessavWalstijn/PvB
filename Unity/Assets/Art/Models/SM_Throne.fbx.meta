@@ -9,7 +9,12 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: pCube48
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Throne
+    second: {fileID: 2100000, guid: c58c85fd5df15e648abd57bd6ea181c1, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
