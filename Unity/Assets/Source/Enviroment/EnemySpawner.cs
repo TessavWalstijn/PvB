@@ -97,7 +97,7 @@ public class EnemySpawner : MonoBehaviour
      */
     private void _SpawnEnemy (int path, string side)
     {
-        _totalEnemiesWave += 3;
+        _totalEnemiesWave += 1;
         Transform[] road = _roads.GetEnemyRoad(path, side);
 
         GameObject enemy = Instantiate(_lightEnemy, road[0].position, road[0].rotation);
