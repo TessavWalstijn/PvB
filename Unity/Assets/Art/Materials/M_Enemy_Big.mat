@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Enemy
+  m_Name: M_Enemy_Big
   m_Shader: {fileID: 4800000, guid: f22dc16a119b10a44ab37ade0162cdfd, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_897E2393:
-        m_Texture: {fileID: 2800000, guid: 7fceb0db0a1e6214f995f3dcfaf076f2, type: 3}
+        m_Texture: {fileID: 2800000, guid: d6428acb46607c142a471854e5eed8f8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
