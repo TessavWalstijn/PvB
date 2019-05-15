@@ -21,10 +21,15 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        _Move();
     }
 
-    private void Move ()
+    /**
+     * <summary>
+     * Moves the enemy to the next point of the road.
+     * </summary>
+     */
+    private void _Move ()
     {
         if (!_move) return;
 
@@ -50,6 +55,12 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+    /**
+     * <summary>
+     * Setup gives the enemy promission to walk the given road.
+     * </summary>
+     * <param name="targets">give the transform array of the road</param>
+     */
     public void SetUp(Transform[] targets)
     {
         _targets = targets;

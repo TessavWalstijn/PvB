@@ -5,13 +5,20 @@ ModelImporter:
   fileIDToRecycleName:
     100000: New_Game_Object_2
     100002: //RootNode
+    100004: SM_Platform_04__1_
     400000: New_Game_Object_2
     400002: //RootNode
+    400004: SM_Platform_04__1_
     2100000: T_Platforms
     2300000: New_Game_Object_2
     3300000: New_Game_Object_2
     4300000: New_Game_Object_2
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Platforms
+    second: {fileID: 2100000, guid: a7888ba73d880524b9b5607c3e0772ca, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
