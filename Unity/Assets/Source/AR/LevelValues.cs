@@ -11,7 +11,7 @@ public class LevelValues : MonoBehaviour
     [SerializeField] private GameObject _inGameUIHolder;
     
     // voor demo
-    public GameObject enemyholder;
+    //public GameObject enemyholder;
 
     private Slider _rotationSlider;
     private Slider _scaleSlider;
@@ -59,6 +59,6 @@ public class LevelValues : MonoBehaviour
 
         //GameObject.Find("ARCoreCamera").GetComponent<ProjectingCursor>().scaleModifier = _scaleSlider.value;
 
-        Instantiate(enemyholder, transform.position, transform.rotation);
+        //Instantiate(enemyholder, transform.position, transform.rotation);
     }
 }

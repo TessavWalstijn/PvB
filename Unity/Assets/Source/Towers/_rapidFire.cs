@@ -4,8 +4,20 @@ using UnityEngine;
 
 public class _rapidFire : _baseTower
 {
-    protected override void _shoot()
+    [SerializeField] private GameObject _bullet;
+
+    protected override void Shoot()
     {
-        Debug.Log("firing!");
+        GameObject _bulletGO = Instantiate (_bullet, _firePoint.position,_firePoint.rotation);
+        _bullet _Bullet = _bulletGO.GetComponent<_bullet>();
+        _bulletGO.transform.parent = gameObject.transform.GetChild(0);
+
+        _bullet bulletRef = GetComponentInChildren<_bullet>();
+        bulletRef.damage = _damage;
+       
+        if (_bullet != null)
+        {
+            _Bullet.Chase(_enemy);
+        }
     }
 }
