@@ -240,8 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c3e2cf3c4a550d4e9a430bdcca1a81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _towerObject: {fileID: 144, guid: a5b13327bf1ebf3438e7d08cd331d966, type: 3}
-  _level: {fileID: 454523981}
+  _towerObject: {fileID: 0}
+  _level: {fileID: 0}
   _selectButton: {fileID: 2042628583}
 --- !u!1001 &95197780
 PrefabInstance:
@@ -294,7 +294,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1081030
+  m_Name: pb_Mesh-827654
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -650,11 +650,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2536613725533764799, guid: c66ee467c3364c84bbccfb4a245c8bda,
         type: 3}
+    - target: {fileID: 441662754817164149, guid: 7e923d726969b084a9b80a239a0a9a08,
+        type: 3}
+      propertyPath: _rapidFireTower
+      value: 
+      objectReference: {fileID: 7578912878272601500, guid: 657de42c73292c742b85a9e119e55cab,
+        type: 3}
     - target: {fileID: 441662754821718945, guid: 7e923d726969b084a9b80a239a0a9a08,
         type: 3}
       propertyPath: _areaOfEffectTower
       value: 
       objectReference: {fileID: 2536613725533764799, guid: c66ee467c3364c84bbccfb4a245c8bda,
+        type: 3}
+    - target: {fileID: 441662754821718945, guid: 7e923d726969b084a9b80a239a0a9a08,
+        type: 3}
+      propertyPath: _rapidFireTower
+      value: 
+      objectReference: {fileID: 7578912878272601500, guid: 657de42c73292c742b85a9e119e55cab,
         type: 3}
     - target: {fileID: 441662754692725001, guid: 7e923d726969b084a9b80a239a0a9a08,
         type: 3}
@@ -662,11 +674,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2536613725533764799, guid: c66ee467c3364c84bbccfb4a245c8bda,
         type: 3}
+    - target: {fileID: 441662754692725001, guid: 7e923d726969b084a9b80a239a0a9a08,
+        type: 3}
+      propertyPath: _rapidFireTower
+      value: 
+      objectReference: {fileID: 7578912878272601500, guid: 657de42c73292c742b85a9e119e55cab,
+        type: 3}
     - target: {fileID: 441662753520263265, guid: 7e923d726969b084a9b80a239a0a9a08,
         type: 3}
       propertyPath: _areaOfEffectTower
       value: 
       objectReference: {fileID: 2536613725533764799, guid: c66ee467c3364c84bbccfb4a245c8bda,
+        type: 3}
+    - target: {fileID: 441662753520263265, guid: 7e923d726969b084a9b80a239a0a9a08,
+        type: 3}
+      propertyPath: _rapidFireTower
+      value: 
+      objectReference: {fileID: 7578912878272601500, guid: 657de42c73292c742b85a9e119e55cab,
         type: 3}
     - target: {fileID: 441662753484561777, guid: 7e923d726969b084a9b80a239a0a9a08,
         type: 3}
@@ -674,11 +698,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2536613725533764799, guid: c66ee467c3364c84bbccfb4a245c8bda,
         type: 3}
+    - target: {fileID: 441662753484561777, guid: 7e923d726969b084a9b80a239a0a9a08,
+        type: 3}
+      propertyPath: _rapidFireTower
+      value: 
+      objectReference: {fileID: 7578912878272601500, guid: 657de42c73292c742b85a9e119e55cab,
+        type: 3}
     - target: {fileID: 441662752987871524, guid: 7e923d726969b084a9b80a239a0a9a08,
         type: 3}
       propertyPath: _areaOfEffectTower
       value: 
       objectReference: {fileID: 2536613725533764799, guid: c66ee467c3364c84bbccfb4a245c8bda,
+        type: 3}
+    - target: {fileID: 441662752987871524, guid: 7e923d726969b084a9b80a239a0a9a08,
+        type: 3}
+      propertyPath: _rapidFireTower
+      value: 
+      objectReference: {fileID: 7578912878272601500, guid: 657de42c73292c742b85a9e119e55cab,
         type: 3}
     - target: {fileID: 699907785303540537, guid: 7e923d726969b084a9b80a239a0a9a08,
         type: 3}
@@ -831,7 +867,7 @@ PrefabInstance:
     - target: {fileID: 2905077969121764953, guid: 7e923d726969b084a9b80a239a0a9a08,
         type: 3}
       propertyPath: _spawnTime
-      value: 5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 661736261, guid: 7e923d726969b084a9b80a239a0a9a08, type: 3}
       propertyPath: _rapidFireTower
@@ -895,12 +931,6 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e923d726969b084a9b80a239a0a9a08, type: 3}
---- !u!1 &454523981 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 699907785303540537, guid: 7e923d726969b084a9b80a239a0a9a08,
-    type: 3}
-  m_PrefabInstance: {fileID: 454523977}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &570103609 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8618161169832193034, guid: 7e923d726969b084a9b80a239a0a9a08,
@@ -958,7 +988,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1081540
+  m_Name: pb_Mesh-828154
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1202,7 +1232,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1081386
+  m_Name: pb_Mesh-828002
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1362,7 +1392,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1081312
+  m_Name: pb_Mesh-827928
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1568,7 +1598,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1081434
+  m_Name: pb_Mesh-828050
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2

@@ -4379,7 +4379,7 @@ GameObject:
   - component: {fileID: 7578912878272601501}
   m_Layer: 2
   m_Name: RapidFireTurret
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
