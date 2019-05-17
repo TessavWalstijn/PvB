@@ -60,11 +60,11 @@ public class RadialMenuButtons : MonoBehaviour
 
    private void InstantiateTower(GameObject tower)      // Functie om de juiste tower de instantiëren op de plek van het geselecteerde plot
    {
-        GameObject _newRapidFireTower = Instantiate(tower, _plot.transform.position, _plot.transform.rotation);
-        _newRapidFireTower.transform.localScale = new Vector3(_newRapidFireTower.transform.localScale.x * scaleModifier, _newRapidFireTower.transform.localScale.y * scaleModifier, _newRapidFireTower.transform.localScale.z * scaleModifier);
-        _newRapidFireTower.transform.parent = _plot.transform;
+        GameObject _newTower = Instantiate(tower, _plot.transform.position, _plot.transform.rotation);
+        _newTower.transform.localScale = new Vector3(_newTower.transform.localScale.x * scaleModifier, _newTower.transform.localScale.y * scaleModifier, _newTower.transform.localScale.z * scaleModifier);
+        _newTower.transform.parent = _plot.transform;
 
-        _currentTower = _newRapidFireTower;
+        _currentTower = _newTower;
 
        _plotScript.GetComponent<SelectPlot>().DisablePlot();
        _plotScript.GetComponent<SelectPlot>().plotHasBuilding = true;
