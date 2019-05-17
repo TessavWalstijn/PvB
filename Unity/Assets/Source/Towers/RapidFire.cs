@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class _rapidFire : _baseTower
+public class RapidFire : BaseTower
 {
     protected override void Shoot()
     {

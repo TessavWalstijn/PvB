@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class _baseTower : MonoBehaviour
+public class BaseTower : MonoBehaviour
 {
     
   [Header("LookAt")]
@@ -29,7 +29,7 @@ public class _baseTower : MonoBehaviour
     void Start() 
     {
          _collider = GetComponent<SphereCollider>();
-         _rapidFire _rapidFire = new _rapidFire();
+         RapidFire _rapidFire = new RapidFire();
          _startRotation = new Vector3(_turretHead.transform.rotation.eulerAngles.x,
          _turretHead.transform.rotation.eulerAngles.y,
          _turretHead.transform.rotation.eulerAngles.z);
@@ -92,7 +92,7 @@ public class _baseTower : MonoBehaviour
     protected virtual void Shoot()
     {
        GameObject _bulletGO = (GameObject)Instantiate (_bullet, _firePoint.position,_firePoint.rotation);
-       _bullet _Bullet = _bulletGO.GetComponent<_bullet>();
+       Bullet _Bullet = _bulletGO.GetComponent<Bullet>();
 
 
        
