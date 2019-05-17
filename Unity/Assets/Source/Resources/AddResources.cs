@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class AddResources : MonoBehaviour
 {
-
-    private float _startTimeAdd;
     [SerializeField]private int _makeResources = 50;
-    private int _tempInt;
     private ResourceOverTime _resource;
+    private float _startTimeAdd;
     
     void Start()
     {
