@@ -33,7 +33,14 @@ public class RadialMenuButtons : MonoBehaviour
 
    public void RadialTopButton()        // Button functie voor het instantiëren
    {
-       InstantiateTower(_rapidFireTower);
+       GameObject _newRapidFireTower = Instantiate(_rapidFireTower, _plot.transform.position, _plot.transform.rotation);
+       _newRapidFireTower.transform.localScale = new Vector3(_newRapidFireTower.transform.localScale.x * scaleModifier, _newRapidFireTower.transform.localScale.y * scaleModifier, _newRapidFireTower.transform.localScale.z * scaleModifier);
+       _newRapidFireTower.transform.parent = _plot.transform;
+
+       _currentTower = _newRapidFireTower;
+
+       _plotScript.GetComponent<SelectPlot>().DisablePlot();
+       _plotScript.GetComponent<SelectPlot>()._plotHasBuilding = true;
    }
 
    public void RadialBottomButton()     // Button functie voor het instantiëren
@@ -48,7 +55,7 @@ public class RadialMenuButtons : MonoBehaviour
 
    public void RadialLeftButton()       // Button functie voor het instantiëren
    {
-       InstantiateTower(_areaOfEffectTower);
+       _plotScript.GetComponent<SelectPlot>().DisablePlot();
    }
 
    public void BuiltTowerRadialRightButton()        // Button functie voor het weghalen van de tower die op dat moment staat op de plot
