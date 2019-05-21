@@ -16,7 +16,12 @@ ModelImporter:
     3300002: group13
     4300000: group13
     4300002: group12
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 1f375be4a8d351e489e713118048c00d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
