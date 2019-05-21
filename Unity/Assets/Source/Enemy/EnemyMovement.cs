@@ -33,7 +33,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (!_move) return;
 
-        float step = _speed * Time.deltaTime * 0.01f; // calculate distance to move
+        float step = _speed * Time.deltaTime; // * 0.01f; // calculate distance to move
         transform.position = Vector3.MoveTowards(transform.position, _targets[_location].position, step);
         transform.LookAt(_targets[_location]);
         // Vector3 direction = transform.position - _targets[_location].position;
