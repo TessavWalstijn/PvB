@@ -1,15 +1,20 @@
 fileFormatVersion: 2
-guid: c07711bd52617d94982c21c49d39e01d
+guid: b3de048c33acaa44bb94161ebf2a33c3
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: material1
+    2100000: T_Foliage_Set_01
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Merged_Skin_ZSphere1
-  externalObjects: {}
+    4300000: SM_Rockwall_Grass
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_Foliage_Set_01
+    second: {fileID: 2100000, guid: 46edbb0499e797c43af978d1bbe472e1, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
