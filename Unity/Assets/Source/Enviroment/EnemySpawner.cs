@@ -9,20 +9,20 @@ public class EnemySpawner : MonoBehaviour
 
     // Spawn time in seconds
     [SerializeField]
-    private float _spawnTime = 2;
+    private float _minSpawnTime = 2;
+    // Spawn time in seconds
+    [SerializeField]
+    private float _maxSpawnTime = 6;
 
     //#region Wave events
     // Triggers an event if the wave hits that number
     // - Lanes
     [SerializeField]
-    private int _unlockTopLane = 2;
+    private int _unlockTopLane = 3;
     [SerializeField]
-    private int _unlockBotLane = 6;
+    private int _unlockBotLane = 7;
     [SerializeField]
-    // - Enemies
-    private int _unlockMidiumEnemy = 4;
-    [SerializeField]
-    private int _unlockHeavyEnemy = 8;
+    private int _unlockHeavyEnemy = 5;
     [SerializeField]
     private int _winGame = 10;
     //#endregion
@@ -58,10 +58,6 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private GameObject _lightEnemy;
 
-    // Midium enemy to spawn in the map
-    [SerializeField]
-    private GameObject _midiumEnemy;
-
     // Heavy enemy to spawn in the map
     [SerializeField]
     private GameObject _heavyEnemy;
@@ -85,7 +81,29 @@ public class EnemySpawner : MonoBehaviour
      */
     void Start()
     {
-        StartCoroutine(_SpawnRoutine(_spawnTime));
+        StartCoroutine(_SpawnRoutine(_maxSpawnTime));
+    }
+
+    /**
+     * <summary>
+     * 
+     * </summary>
+     * <param name="wave"></param>
+     * <param name="minWave"></param>
+     * <param name="maxWave"></param>
+     * <param name="minTime"></param>
+     * <param name="maxTime"></param>
+     * <returns></returns>
+     */
+    private float _MapSpawnTime (float wave, float minWave, float maxWave, float minTime, float maxTime)
+    {
+        float n = wave;
+        float start1 = minWave;
+        float stop1 = maxWave;
+        float start2 = 0;
+        float stop2 = maxTime - minTime;
+
+        return (n - start1) / (stop1 - start1) * (stop2 - start2) + start2;
     }
 
     /**
@@ -97,7 +115,7 @@ public class EnemySpawner : MonoBehaviour
      */
     private void _SpawnEnemy (int path, string side)
     {
-        _totalEnemiesWave += 1;
+        _totalEnemiesWave += 5;
         Transform[] road = _roads.GetEnemyRoad(path, side);
 
         GameObject enemy = Instantiate(_lightEnemy, road[0].position, road[0].rotation);
@@ -139,7 +157,10 @@ public class EnemySpawner : MonoBehaviour
         // Stops if the game is won!
         while (!_finalWave)
         {
-            yield return new WaitForSeconds(time);
+            float respawnTime = _MapSpawnTime(_waves, 1, (float)_winGame -1f, _minSpawnTime, _maxSpawnTime);
+
+            yield return new WaitForSeconds(time - respawnTime);
+            // Debug.Log(time - respawnTime);
             
             if (_left[_laneSpawning] == spawning.Main) {
                 _SpawnEnemy(0, "left");

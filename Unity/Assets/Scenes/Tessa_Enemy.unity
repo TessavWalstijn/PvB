@@ -8305,6 +8305,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 185271958, guid: 3018c965e4eae4748bff956143f5b4cb, type: 3}
+      propertyPath: _topRoadR.Array.data[9]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 185271958, guid: 3018c965e4eae4748bff956143f5b4cb, type: 3}
+      propertyPath: _topRoadR.Array.data[10]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 185271958, guid: 3018c965e4eae4748bff956143f5b4cb, type: 3}
+      propertyPath: _topRoadL.Array.data[9]
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 185271958, guid: 3018c965e4eae4748bff956143f5b4cb, type: 3}
+      propertyPath: _botRoadL.Array.data[7]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 185271958, guid: 3018c965e4eae4748bff956143f5b4cb, type: 3}
+      propertyPath: _botRoadR.Array.data[9]
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 185271957, guid: 3018c965e4eae4748bff956143f5b4cb, type: 3}
       propertyPath: _lightEnemy
       value: 
@@ -8318,6 +8338,15 @@ PrefabInstance:
     - target: {fileID: 185271957, guid: 3018c965e4eae4748bff956143f5b4cb, type: 3}
       propertyPath: _spawnTime
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 185271957, guid: 3018c965e4eae4748bff956143f5b4cb, type: 3}
+      propertyPath: _heavyEnemy
+      value: 
+      objectReference: {fileID: 8846847944970180041, guid: 9dfe35b2395d1464291ebeb38dbcfd5e,
+        type: 3}
+    - target: {fileID: 185271957, guid: 3018c965e4eae4748bff956143f5b4cb, type: 3}
+      propertyPath: _unlockBotLane
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 683905259, guid: 3018c965e4eae4748bff956143f5b4cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8441,11 +8470,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1245106032, guid: 3018c965e4eae4748bff956143f5b4cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.49
+      value: 8.69
       objectReference: {fileID: 0}
     - target: {fileID: 1245106032, guid: 3018c965e4eae4748bff956143f5b4cb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.27
+      value: 1.64
       objectReference: {fileID: 0}
     - target: {fileID: 1245106032, guid: 3018c965e4eae4748bff956143f5b4cb, type: 3}
       propertyPath: m_LocalPosition.y
