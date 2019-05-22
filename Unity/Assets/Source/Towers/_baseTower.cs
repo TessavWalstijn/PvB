@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class _baseTower : MonoBehaviour
-{
-    
+{   
   [Header("LookAt")]
 
     [SerializeField] private GameObject _turretHead;
     [SerializeField] private float _turnSpeed = 10f;
    
     public GameObject _enemy;
-    private  Vector3 _startRotation;
     public List<GameObject> enemiesInCollider;
     private SphereCollider _collider;
     
@@ -24,15 +22,12 @@ public class _baseTower : MonoBehaviour
 
     protected private float _fireCountdown = 0f;
 
-
     void Start() 
     {
          _collider = GetComponent<SphereCollider>();
-         _rapidFire _rapidFire = new _rapidFire();
-         _startRotation = new Vector3(_turretHead.transform.rotation.eulerAngles.x,
-         _turretHead.transform.rotation.eulerAngles.y,
-         _turretHead.transform.rotation.eulerAngles.z);
+         //_rapidFire _rapidFire = new _rapidFire();
     }
+
     void Update()
     {
         float shortestDistance = Mathf.Infinity;
@@ -72,8 +67,7 @@ public class _baseTower : MonoBehaviour
 
         Vector3 dir = _enemy.transform.position - _turretHead.transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
-        Quaternion rotation = Quaternion.Lerp(_turretHead.transform.rotation, lookRotation, Time.deltaTime * _turnSpeed);
-        _turretHead.transform.rotation = rotation;
+        Quaternion rotation = Quaternion.Lerp(_turretHead.transform.rotation, lookRotation, Time.deltaTime * _turnSpeed); 
     }
       
     void OnTriggerEnter(Collider other)
