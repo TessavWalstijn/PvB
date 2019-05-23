@@ -4,30 +4,33 @@ using UnityEngine;
 
 public class SelectPlot : MonoBehaviour
 {
+    // Referenties naar de UI menu's die boven de plot weergegeven worden
     [Header("Radial Menus")]
     [SerializeField] private GameObject _radialMenu;
     [SerializeField] private GameObject _builtTowerRadialMenu;
 
-    public bool _plotHasBuilding = false;
+    // Boolean om bij te houden of er wel of niet gebouwd is op een plot
+    public bool plotHasBuilding = false;
 
     void Start()
     {
+        // Zet de UI menu's uit als de game wordt opgestart
         _radialMenu.SetActive(false);
         _builtTowerRadialMenu.SetActive(false);
     }
 
-    public void EnablePlot()
+    public void EnablePlot()        // Functie om de plot aan te zetten als een plot geselecteerd wordt
     {
-        if(!_plotHasBuilding)
+        if(!plotHasBuilding)
             _radialMenu.SetActive(true);
         
         else
             _builtTowerRadialMenu.SetActive(true);
     }
 
-    public void DisablePlot()
+    public void DisablePlot()       // Functie om de plot uit te zetten als een plot gedeselecteerd wordt
     {
-        if(!_plotHasBuilding)
+        if(!plotHasBuilding)
             _radialMenu.SetActive(false);
 
         else

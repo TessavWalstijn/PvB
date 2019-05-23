@@ -74,7 +74,17 @@ ModelImporter:
     4300020: Chicken_Leg_L
     4300022: Chicken_Leg_R
     4300024: Chicken_Wing_R
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert4
+    second: {fileID: 2100000, guid: 06d8d38cbfcdf2d4d8c25d633fbe11c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert7
+    second: {fileID: 2100000, guid: 06d8d38cbfcdf2d4d8c25d633fbe11c3, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

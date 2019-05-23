@@ -51,7 +51,12 @@ ModelImporter:
     4300012: PortalMoustacheSmall
     4300014: PortalBrows
     4300016: PortalBase
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #25'
+    second: {fileID: 2100000, guid: d4dac9c68cf8b68499d60fd21cdf16be, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

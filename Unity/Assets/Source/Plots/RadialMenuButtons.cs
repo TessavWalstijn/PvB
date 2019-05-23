@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class RadialMenuButtons : MonoBehaviour
 {
-
+    // Referentie naar elke tower die geplaatst kan worden
     [Header("Towers")]
     [SerializeField] private GameObject _rapidFireTower;
     [SerializeField] private GameObject _areaOfEffectTower;
     [SerializeField] private GameObject _slowTower;
 
+    // Referentie naar de tower die op dat moment gebouwd is
     [SerializeField] private GameObject _currentTower;
 
+    // Referentie naar de locatie waar het object neergezet wordt
     [Header("Spawn Location")]
     [SerializeField] private GameObject _plot;
+
+    // Referentie naar het script: SelectPlot
     private SelectPlot _plotScript;
 
+    // Referentie naar de schaling van de UI slider, om de objecten te spawnen met het juiste formaat.
     [Header("Other Variables")]
     public float scaleModifier;
 
@@ -26,37 +31,42 @@ public class RadialMenuButtons : MonoBehaviour
         _plotScript = _plot.GetComponent<SelectPlot>();
     }
 
-   public void RadialTopButton()
+   public void RadialTopButton()        // Button functie voor het instantiëren
    {
-       GameObject _newRapidFireTower = Instantiate(_rapidFireTower, _plot.transform.position, _plot.transform.rotation);
-       _newRapidFireTower.transform.localScale = new Vector3(_newRapidFireTower.transform.localScale.x * scaleModifier, _newRapidFireTower.transform.localScale.y * scaleModifier, _newRapidFireTower.transform.localScale.z * scaleModifier);
-       _newRapidFireTower.transform.parent = _plot.transform;
-
-       _currentTower = _newRapidFireTower;
-
-       _plotScript.GetComponent<SelectPlot>().DisablePlot();
-       _plotScript.GetComponent<SelectPlot>()._plotHasBuilding = true;
+       InstantiateTower(_rapidFireTower);
    }
 
-   public void RadialBottomButton()
+   public void RadialBottomButton()     // Button functie voor het instantiëren
    {
        _plotScript.GetComponent<SelectPlot>().DisablePlot();
    }
 
-   public void RadialRightButton()
+   public void RadialRightButton()      // Button functie voor sluiten van de UI
    {
        _plotScript.GetComponent<SelectPlot>().DisablePlot();
    }
 
-   public void RadialLeftButton()
+   public void RadialLeftButton()       // Button functie voor het instantiëren
    {
-       _plotScript.GetComponent<SelectPlot>().DisablePlot();
+       InstantiateTower(_areaOfEffectTower);
    }
 
-   public void BuiltTowerRadialRightButton()
+   public void BuiltTowerRadialRightButton()        // Button functie voor het weghalen van de tower die op dat moment staat op de plot
    {
        Destroy(_currentTower.gameObject);
        _plotScript.GetComponent<SelectPlot>().DisablePlot();
-       _plotScript.GetComponent<SelectPlot>()._plotHasBuilding = false;
+       _plotScript.GetComponent<SelectPlot>().plotHasBuilding = false;
+   }
+
+   private void InstantiateTower(GameObject tower)      // Functie om de juiste tower de instantiëren op de plek van het geselecteerde plot
+   {
+        GameObject _newTower = Instantiate(tower, _plot.transform.position, _plot.transform.rotation);
+        _newTower.transform.localScale = new Vector3(_newTower.transform.localScale.x * scaleModifier, _newTower.transform.localScale.y * scaleModifier, _newTower.transform.localScale.z * scaleModifier);
+        _newTower.transform.parent = _plot.transform;
+
+        _currentTower = _newTower;
+
+       _plotScript.GetComponent<SelectPlot>().DisablePlot();
+       _plotScript.GetComponent<SelectPlot>().plotHasBuilding = true;
    }
 }
