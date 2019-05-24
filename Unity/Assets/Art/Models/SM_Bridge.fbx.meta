@@ -56,7 +56,17 @@ ModelImporter:
     4300010: SM_FryerBridge88
     4300012: SM_FryerBridge
     4300014: SM_FryerPillar
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bridge1
+    second: {fileID: 2100000, guid: b7ac2664c6d66d64488fb1ab91448706, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pillars
+    second: {fileID: 2100000, guid: 6b5a7563e9da779478f4b58e780a0c38, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
