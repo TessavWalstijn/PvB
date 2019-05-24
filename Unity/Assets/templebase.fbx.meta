@@ -1,0 +1,493 @@
+fileFormatVersion: 2
+guid: b52217c01da838d4fa2557bafe40bb65
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Cube
+    100002: Cube__1_
+    100004: Cube__3_
+    100006: Cube__4_
+    100008: //RootNode
+    100010: Feet
+    100012: Foot1
+    100014: Foot2
+    100016: Foot3
+    100018: Foot5
+    100020: Foot7
+    100022: Layer1
+    100024: layer3
+    100026: layer4
+    100028: Layer_2
+    100030: pCube1
+    100032: pCube10
+    100034: pCube11
+    100036: pCube12
+    100038: pCube13
+    100040: pCube14
+    100042: pCube15
+    100044: pCube16
+    100046: pCube17
+    100048: pCube18
+    100050: pCube18 1
+    100052: pCube18 2
+    100054: pCube19
+    100056: pCube19 1
+    100058: pCube19 2
+    100060: pCube2
+    100062: pCube20
+    100064: pCube21
+    100066: pCube22
+    100068: pCube23
+    100070: pCube26
+    100072: pCube27
+    100074: pCube3
+    100076: pCube7
+    100078: pCube8
+    100080: pCube9
+    100082: PillarGood
+    100084: PillarGood2
+    100086: PillarGood4
+    100088: puntjes1
+    100090: puntjes2
+    100092: puntjes3
+    100094: Feet 1
+    100096: Foot1 1
+    100098: Foot2 1
+    100100: Foot3 1
+    100102: Foot5 1
+    100104: Foot7 1
+    100106: group1
+    100108: Layer2
+    100110: layer5
+    100112: Layer_5
+    100114: pCube1 1
+    100116: pCube10 1
+    100118: pCube11 1
+    100120: pCube12 1
+    100122: pCube13 1
+    100124: pCube14 1
+    100126: pCube15 1
+    100128: pCube17 1
+    100130: pCube18 3
+    100132: pCube18 4
+    100134: pCube18 5
+    100136: pCube19 3
+    100138: pCube19 4
+    100140: pCube19 5
+    100142: pCube2 1
+    100144: pCube20 1
+    100146: pCube28
+    100148: pCube29
+    100150: pCube3 1
+    100152: pCube30
+    100154: pCube31
+    100156: pCube32
+    100158: pCube33
+    100160: pCube7 1
+    100162: pCube8 1
+    100164: pCube9 1
+    100166: PillarGood 1
+    100168: PillarGood2 1
+    100170: PillarGood5
+    100172: puntjes1 1
+    100174: puntjes2 1
+    100176: puntjes3 1
+    100178: stairs
+    400000: Cube
+    400002: Cube__1_
+    400004: Cube__3_
+    400006: Cube__4_
+    400008: //RootNode
+    400010: Feet
+    400012: Foot1
+    400014: Foot2
+    400016: Foot3
+    400018: Foot5
+    400020: Foot7
+    400022: Layer1
+    400024: layer3
+    400026: layer4
+    400028: Layer_2
+    400030: pCube1
+    400032: pCube10
+    400034: pCube11
+    400036: pCube12
+    400038: pCube13
+    400040: pCube14
+    400042: pCube15
+    400044: pCube16
+    400046: pCube17
+    400048: pCube18
+    400050: pCube18 1
+    400052: pCube18 2
+    400054: pCube19
+    400056: pCube19 1
+    400058: pCube19 2
+    400060: pCube2
+    400062: pCube20
+    400064: pCube21
+    400066: pCube22
+    400068: pCube23
+    400070: pCube26
+    400072: pCube27
+    400074: pCube3
+    400076: pCube7
+    400078: pCube8
+    400080: pCube9
+    400082: PillarGood
+    400084: PillarGood2
+    400086: PillarGood4
+    400088: puntjes1
+    400090: puntjes2
+    400092: puntjes3
+    400094: Feet 1
+    400096: Foot1 1
+    400098: Foot2 1
+    400100: Foot3 1
+    400102: Foot5 1
+    400104: Foot7 1
+    400106: group1
+    400108: Layer2
+    400110: layer5
+    400112: Layer_5
+    400114: pCube1 1
+    400116: pCube10 1
+    400118: pCube11 1
+    400120: pCube12 1
+    400122: pCube13 1
+    400124: pCube14 1
+    400126: pCube15 1
+    400128: pCube17 1
+    400130: pCube18 3
+    400132: pCube18 4
+    400134: pCube18 5
+    400136: pCube19 3
+    400138: pCube19 4
+    400140: pCube19 5
+    400142: pCube2 1
+    400144: pCube20 1
+    400146: pCube28
+    400148: pCube29
+    400150: pCube3 1
+    400152: pCube30
+    400154: pCube31
+    400156: pCube32
+    400158: pCube33
+    400160: pCube7 1
+    400162: pCube8 1
+    400164: pCube9 1
+    400166: PillarGood 1
+    400168: PillarGood2 1
+    400170: PillarGood5
+    400172: puntjes1 1
+    400174: puntjes2 1
+    400176: puntjes3 1
+    400178: stairs
+    2100000: M_Dev_Test_Enemy
+    2100002: lambert1
+    2100004: lambert2
+    2300000: Cube
+    2300002: Cube__1_
+    2300004: Cube__3_
+    2300006: Cube__4_
+    2300008: Foot1
+    2300010: Foot2
+    2300012: Foot3
+    2300014: Foot5
+    2300016: Foot7
+    2300018: pCube1
+    2300020: pCube10
+    2300022: pCube11
+    2300024: pCube12
+    2300026: pCube13
+    2300028: pCube14
+    2300030: pCube15
+    2300032: pCube16
+    2300034: pCube17
+    2300036: pCube18
+    2300038: pCube18 1
+    2300040: pCube18 2
+    2300042: pCube19
+    2300044: pCube19 1
+    2300046: pCube19 2
+    2300048: pCube2
+    2300050: pCube20
+    2300052: pCube21
+    2300054: pCube22
+    2300056: pCube23
+    2300058: pCube26
+    2300060: pCube27
+    2300062: pCube3
+    2300064: pCube7
+    2300066: pCube8
+    2300068: pCube9
+    2300070: PillarGood
+    2300072: PillarGood2
+    2300074: PillarGood4
+    2300076: Foot1 1
+    2300078: Foot2 1
+    2300080: Foot3 1
+    2300082: Foot5 1
+    2300084: Foot7 1
+    2300086: pCube1 1
+    2300088: pCube10 1
+    2300090: pCube11 1
+    2300092: pCube12 1
+    2300094: pCube13 1
+    2300096: pCube14 1
+    2300098: pCube15 1
+    2300100: pCube17 1
+    2300102: pCube18 3
+    2300104: pCube18 4
+    2300106: pCube18 5
+    2300108: pCube19 3
+    2300110: pCube19 4
+    2300112: pCube19 5
+    2300114: pCube2 1
+    2300116: pCube20 1
+    2300118: pCube28
+    2300120: pCube29
+    2300122: pCube3 1
+    2300124: pCube30
+    2300126: pCube31
+    2300128: pCube32
+    2300130: pCube33
+    2300132: pCube7 1
+    2300134: pCube8 1
+    2300136: pCube9 1
+    2300138: PillarGood 1
+    2300140: PillarGood2 1
+    2300142: PillarGood5
+    2300144: stairs
+    3300000: Cube
+    3300002: Cube__1_
+    3300004: Cube__3_
+    3300006: Cube__4_
+    3300008: Foot1
+    3300010: Foot2
+    3300012: Foot3
+    3300014: Foot5
+    3300016: Foot7
+    3300018: pCube1
+    3300020: pCube10
+    3300022: pCube11
+    3300024: pCube12
+    3300026: pCube13
+    3300028: pCube14
+    3300030: pCube15
+    3300032: pCube16
+    3300034: pCube17
+    3300036: pCube18
+    3300038: pCube18 1
+    3300040: pCube18 2
+    3300042: pCube19
+    3300044: pCube19 1
+    3300046: pCube19 2
+    3300048: pCube2
+    3300050: pCube20
+    3300052: pCube21
+    3300054: pCube22
+    3300056: pCube23
+    3300058: pCube26
+    3300060: pCube27
+    3300062: pCube3
+    3300064: pCube7
+    3300066: pCube8
+    3300068: pCube9
+    3300070: PillarGood
+    3300072: PillarGood2
+    3300074: PillarGood4
+    3300076: Foot1 1
+    3300078: Foot2 1
+    3300080: Foot3 1
+    3300082: Foot5 1
+    3300084: Foot7 1
+    3300086: pCube1 1
+    3300088: pCube10 1
+    3300090: pCube11 1
+    3300092: pCube12 1
+    3300094: pCube13 1
+    3300096: pCube14 1
+    3300098: pCube15 1
+    3300100: pCube17 1
+    3300102: pCube18 3
+    3300104: pCube18 4
+    3300106: pCube18 5
+    3300108: pCube19 3
+    3300110: pCube19 4
+    3300112: pCube19 5
+    3300114: pCube2 1
+    3300116: pCube20 1
+    3300118: pCube28
+    3300120: pCube29
+    3300122: pCube3 1
+    3300124: pCube30
+    3300126: pCube31
+    3300128: pCube32
+    3300130: pCube33
+    3300132: pCube7 1
+    3300134: pCube8 1
+    3300136: pCube9 1
+    3300138: PillarGood 1
+    3300140: PillarGood2 1
+    3300142: PillarGood5
+    3300144: stairs
+    4300000: Cube__3_
+    4300002: Cube__4_
+    4300004: Cube
+    4300006: Cube__1_
+    4300008: pCube1
+    4300010: pCube2
+    4300012: PillarGood
+    4300014: pCube3
+    4300016: PillarGood2
+    4300018: pCube7
+    4300020: Foot1
+    4300022: Foot2
+    4300024: Foot3
+    4300026: Foot5
+    4300028: Foot7
+    4300030: PillarGood4
+    4300032: pCube8
+    4300034: pCube9
+    4300036: pCube10
+    4300038: pCube11
+    4300040: pCube12
+    4300042: pCube17
+    4300044: pCube13
+    4300046: pCube14
+    4300048: pCube15
+    4300050: pCube20
+    4300052: pCube16
+    4300054: pCube19
+    4300056: pCube18
+    4300058: pCube19
+    4300060: pCube18
+    4300062: pCube19
+    4300064: pCube18
+    4300066: pCube21
+    4300068: pCube22
+    4300070: pCube23
+    4300072: pCube26
+    4300074: pCube27
+    4300076: stairs
+    4300078: pCube8
+    4300080: pCube9
+    4300082: pCube10
+    4300084: pCube11
+    4300086: pCube12
+    4300088: pCube17
+    4300090: pCube13
+    4300092: pCube14
+    4300094: pCube15
+    4300096: pCube20
+    4300098: pCube19
+    4300100: pCube18
+    4300102: pCube19
+    4300104: pCube18
+    4300106: pCube19
+    4300108: pCube18
+    4300110: pCube28
+    4300112: pCube29
+    4300114: pCube30
+    4300116: pCube31
+    4300118: pCube32
+    4300120: pCube33
+    4300122: PillarGood5
+    4300124: pCube1
+    4300126: pCube2
+    4300128: PillarGood
+    4300130: pCube3
+    4300132: PillarGood2
+    4300134: pCube7
+    4300136: Foot1
+    4300138: Foot2
+    4300140: Foot3
+    4300142: Foot5
+    4300144: Foot7
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
