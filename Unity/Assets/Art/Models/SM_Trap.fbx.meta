@@ -1,22 +1,15 @@
 fileFormatVersion: 2
-guid: c7e3150752803154ea5aca5dfcec288f
+guid: 27ff64214961ee745b2a9b63ca763257
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Stone_03
     400000: //RootNode
-    400002: Stone_03
     2100000: lambert1
-    2300000: Stone_03
-    3300000: Stone_03
-    4300000: Stone_03
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert1
-    second: {fileID: 2100000, guid: 79010967c229fe04a84e63c205dec5b7, type: 2}
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: trap
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
