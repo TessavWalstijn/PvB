@@ -109,7 +109,7 @@ SpriteRenderer:
   m_Size: {x: 5.76, y: 5.76}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!135 &5417491979841794540
@@ -217,7 +217,7 @@ SpriteRenderer:
   m_Size: {x: 5.76, y: 5.76}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!135 &6639222214242880240
@@ -355,7 +355,7 @@ SpriteRenderer:
   m_Size: {x: 5.76, y: 5.76}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!135 &2803974265239192359
@@ -424,7 +424,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3172591356461202388}
   - component: {fileID: 4612151855057784882}
-  - component: {fileID: 6553005477712014128}
+  - component: {fileID: 4955999335490926243}
   m_Layer: 0
   m_Name: AoE_Impact
   m_TagString: Untagged
@@ -459,7 +459,7 @@ Animator:
   m_GameObject: {fileID: 6178372207627295093}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 42b919db4f471e34486d16416c4d7286, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -468,7 +468,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6553005477712014128
+--- !u!114 &4955999335490926243
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -477,16 +477,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 6178372207627295093}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd97575b36268ff4980051d2a4b51a94, type: 3}
+  m_Script: {fileID: 11500000, guid: d2face86916b34142a41e0023392d8bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _aoeBullet: {fileID: 5505578291659208090, guid: b6980a207c4c0b04dbbb5d242ea3c465,
-    type: 3}
+  _aoeBullet: {fileID: 0}
   _spawnLocations:
-  - {fileID: 5323828809398581509}
-  - {fileID: 6340259139988459300}
-  - {fileID: 25246107440431055}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   hitboxHolders:
-  - {fileID: 2394920174265858237}
-  - {fileID: 3152331572618578714}
-  - {fileID: 5810664256847824960}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

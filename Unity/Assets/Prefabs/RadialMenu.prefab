@@ -1216,7 +1216,7 @@ RectTransform:
   m_GameObject: {fileID: 7223751338318748611}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.080098, y: 0.080098, z: 0.080098}
   m_Children:
   - {fileID: 7223751339553019494}
   - {fileID: 1004131372056867982}
@@ -1300,9 +1300,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca749a839c5c0c54ea757bcf98c118e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rapidFireTower: {fileID: 0}
-  _areaOfEffectTower: {fileID: 0}
-  _slowTower: {fileID: 0}
+  _rapidFireTower: {fileID: 2776790763828598794, guid: 766450688dc1f0b458b1a11d7a913e34,
+    type: 3}
+  _areaOfEffectTower: {fileID: 100000, guid: c66ee467c3364c84bbccfb4a245c8bda, type: 3}
+  _slowTower: {fileID: 7098452828436408061, guid: 6b8498fecf6eb5a4b87dc2def449683e,
+    type: 3}
   _currentTower: {fileID: 0}
   _plot: {fileID: 0}
   scaleModifier: 0
