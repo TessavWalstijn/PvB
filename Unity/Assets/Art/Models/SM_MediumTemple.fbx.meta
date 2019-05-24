@@ -20,6 +20,47 @@ ModelImporter:
     100028: polySurface92
     100030: polySurface92 1
     100032: //RootNode
+    100034: polySurface105
+    100036: polySurface105 1
+    100038: group10 1
+    100040: group11 1
+    100042: polySurface106
+    100044: polySurface106 1
+    100046: polySurface107
+    100048: polySurface107 1
+    100050: polySurface108
+    100052: polySurface108 1
+    100054: SmallTemple1
+    100056: group13
+    100058: polySurface112
+    100060: polySurface113
+    100062: group14
+    100064: group15
+    100066: polySurface114
+    100068: polySurface114 1
+    100070: polySurface115
+    100072: polySurface115 1
+    100074: polySurface116
+    100076: polySurface116 1
+    100078: polySurface117
+    100080: polySurface118
+    100082: polySurface119
+    100084: polySurface120
+    100086: polySurface120 1
+    100088: transform3
+    100090: transform4
+    100092: group16
+    100094: group17
+    100096: group18
+    100098: group19
+    100100: pCube41
+    100102: pCube41 1
+    100104: pCube41 2
+    100106: pCube41 3
+    100108: pCube42
+    100110: pCube42 1
+    100112: pCube42 2
+    100114: pCube42 3
     400000: Foot12
     400002: Foot12 1
     400004: Foot13
@@ -37,6 +78,47 @@ ModelImporter:
     400028: polySurface92
     400030: polySurface92 1
     400032: //RootNode
+    400034: polySurface105
+    400036: polySurface105 1
+    400038: group10 1
+    400040: group11 1
+    400042: polySurface106
+    400044: polySurface106 1
+    400046: polySurface107
+    400048: polySurface107 1
+    400050: polySurface108
+    400052: polySurface108 1
+    400054: SmallTemple1
+    400056: group13
+    400058: polySurface112
+    400060: polySurface113
+    400062: group14
+    400064: group15
+    400066: polySurface114
+    400068: polySurface114 1
+    400070: polySurface115
+    400072: polySurface115 1
+    400074: polySurface116
+    400076: polySurface116 1
+    400078: polySurface117
+    400080: polySurface118
+    400082: polySurface119
+    400084: polySurface120
+    400086: polySurface120 1
+    400088: transform3
+    400090: transform4
+    400092: group16
+    400094: group17
+    400096: group18
+    400098: group19
+    400100: pCube41
+    400102: pCube41 1
+    400104: pCube41 2
+    400106: pCube41 3
+    400108: pCube42
+    400110: pCube42 1
+    400112: pCube42 2
+    400114: pCube42 3
     2100000: Big_Temple
     2300000: Foot12
     2300002: Foot12 1
@@ -52,6 +134,33 @@ ModelImporter:
     2300022: polySurface73 1
     2300024: polySurface92
     2300026: polySurface92 1
+    2300028: polySurface105
+    2300030: polySurface105 1
+    2300032: polySurface106
+    2300034: polySurface106 1
+    2300036: polySurface107
+    2300038: polySurface107 1
+    2300040: polySurface108
+    2300042: polySurface108 1
+    2300044: polySurface112
+    2300046: polySurface113
+    2300048: polySurface114
+    2300050: polySurface114 1
+    2300052: polySurface115
+    2300054: polySurface115 1
+    2300056: polySurface116
+    2300058: polySurface116 1
+    2300060: polySurface117
+    2300062: polySurface118
+    2300064: polySurface120
+    2300066: pCube41
+    2300068: pCube41 1
+    2300070: pCube41 2
+    2300072: pCube41 3
+    2300074: pCube42
+    2300076: pCube42 1
+    2300078: pCube42 2
+    2300080: pCube42 3
     3300000: Foot12
     3300002: Foot12 1
     3300004: Foot13
@@ -66,6 +175,33 @@ ModelImporter:
     3300022: polySurface73 1
     3300024: polySurface92
     3300026: polySurface92 1
+    3300028: polySurface105
+    3300030: polySurface105 1
+    3300032: polySurface106
+    3300034: polySurface106 1
+    3300036: polySurface107
+    3300038: polySurface107 1
+    3300040: polySurface108
+    3300042: polySurface108 1
+    3300044: polySurface112
+    3300046: polySurface113
+    3300048: polySurface114
+    3300050: polySurface114 1
+    3300052: polySurface115
+    3300054: polySurface115 1
+    3300056: polySurface116
+    3300058: polySurface116 1
+    3300060: polySurface117
+    3300062: polySurface118
+    3300064: polySurface120
+    3300066: pCube41
+    3300068: pCube41 1
+    3300070: pCube41 2
+    3300072: pCube41 3
+    3300074: pCube42
+    3300076: pCube42 1
+    3300078: pCube42 2
+    3300080: pCube42 3
     4300000: polySurface73
     4300002: Foot12
     4300004: polySurface92
@@ -80,6 +216,33 @@ ModelImporter:
     4300022: polySurface104
     4300024: Foot15
     4300026: Foot17
+    4300028: polySurface105
+    4300030: polySurface105
+    4300032: polySurface106
+    4300034: polySurface107
+    4300036: polySurface108
+    4300038: polySurface106
+    4300040: polySurface107
+    4300042: polySurface108
+    4300044: polySurface112
+    4300046: polySurface113
+    4300048: polySurface120
+    4300050: polySurface116
+    4300052: polySurface115
+    4300054: polySurface114
+    4300056: polySurface117
+    4300058: polySurface118
+    4300060: polySurface116
+    4300062: polySurface115
+    4300064: polySurface114
+    4300066: pCube42
+    4300068: pCube41
+    4300070: pCube42
+    4300072: pCube41
+    4300074: pCube42
+    4300076: pCube41
+    4300078: pCube42
+    4300080: pCube41
   externalObjects: {}
   materials:
     importMaterials: 1

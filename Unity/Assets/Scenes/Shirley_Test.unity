@@ -3121,7 +3121,7 @@ Transform:
   m_LocalScale: {x: 1.5003942, y: 1.2602, z: 1.2602}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 31.856, y: -103.088005, z: -4.8230004}
 --- !u!43 &291342775
 Mesh:
