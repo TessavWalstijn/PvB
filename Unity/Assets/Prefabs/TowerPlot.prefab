@@ -347,9 +347,14 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7223751338318748620, guid: 24001fb6c29fed0478953b0234fd613e,
+    - target: {fileID: 441662754291744805, guid: 24001fb6c29fed0478953b0234fd613e,
         type: 3}
-      propertyPath: m_Camera
+      propertyPath: _rapidFireTower
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 441662754291744805, guid: 24001fb6c29fed0478953b0234fd613e,
+        type: 3}
+      propertyPath: _areaOfEffectTower
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 441662754291744805, guid: 24001fb6c29fed0478953b0234fd613e,
@@ -357,6 +362,11 @@ PrefabInstance:
       propertyPath: _plot
       value: 
       objectReference: {fileID: 9212668387882158603}
+    - target: {fileID: 7223751338318748620, guid: 24001fb6c29fed0478953b0234fd613e,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1004131371524287423, guid: 24001fb6c29fed0478953b0234fd613e,
         type: 3}
       propertyPath: m_TargetGraphic

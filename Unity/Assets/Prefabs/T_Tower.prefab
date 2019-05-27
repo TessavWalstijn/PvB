@@ -10212,7 +10212,7 @@ Transform:
   m_GameObject: {fileID: 2776790763828598794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.8, y: 3.27, z: 8.273832}
-  m_LocalScale: {x: 0.045, y: 0.045, z: 0.045}
+  m_LocalScale: {x: 0.0354375, y: 0.0354375, z: 0.0354375}
   m_Children:
   - {fileID: 6658360384956162778}
   m_Father: {fileID: 0}
@@ -10236,8 +10236,8 @@ MonoBehaviour:
   enemiesInCollider: []
   _damage: 20
   _fireRate: 2.5
-  _firePoint: {fileID: 0}
-  _bullet: {fileID: 0}
+  _firePoint: {fileID: 2776790764161421875}
+  _bullet: {fileID: 564140057421387339, guid: 3c71d1afcbe7df8409eb9f58e4ef1f3f, type: 3}
 --- !u!135 &8102590971807897614
 SphereCollider:
   m_ObjectHideFlags: 0
