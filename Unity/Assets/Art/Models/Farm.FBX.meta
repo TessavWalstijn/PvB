@@ -1,0 +1,276 @@
+fileFormatVersion: 2
+guid: f06ed6edd3670f84999f215ce8ddda79
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Group001
+    100004: Line001
+    100006: Object
+    100008: Object 1
+    100010: Object 10
+    100012: Object 11
+    100014: Object 12
+    100016: Object 13
+    100018: Object 14
+    100020: Object 15
+    100022: Object 16
+    100024: Object 17
+    100026: Object 18
+    100028: Object 19
+    100030: Object 2
+    100032: Object 20
+    100034: Object 21
+    100036: Object 22
+    100038: Object 23
+    100040: Object 24
+    100042: Object 25
+    100044: Object 26
+    100046: Object 27
+    100048: Object 28
+    100050: Object 29
+    100052: Object 3
+    100054: Object 30
+    100056: Object 31
+    100058: Object 4
+    100060: Object 5
+    100062: Object 6
+    100064: Object 7
+    100066: Object 8
+    100068: Object 9
+    100070: Object002
+    100072: Object003
+    100074: Object007
+    100076: Object008
+    100078: Object009
+    100080: Plane002
+    400000: //RootNode
+    400002: Group001
+    400004: Line001
+    400006: Object
+    400008: Object 1
+    400010: Object 10
+    400012: Object 11
+    400014: Object 12
+    400016: Object 13
+    400018: Object 14
+    400020: Object 15
+    400022: Object 16
+    400024: Object 17
+    400026: Object 18
+    400028: Object 19
+    400030: Object 2
+    400032: Object 20
+    400034: Object 21
+    400036: Object 22
+    400038: Object 23
+    400040: Object 24
+    400042: Object 25
+    400044: Object 26
+    400046: Object 27
+    400048: Object 28
+    400050: Object 29
+    400052: Object 3
+    400054: Object 30
+    400056: Object 31
+    400058: Object 4
+    400060: Object 5
+    400062: Object 6
+    400064: Object 7
+    400066: Object 8
+    400068: Object 9
+    400070: Object002
+    400072: Object003
+    400074: Object007
+    400076: Object008
+    400078: Object009
+    400080: Plane002
+    2100000: 02 - Default
+    2300000: Line001
+    2300002: Object 10
+    2300004: Object 11
+    2300006: Object 12
+    2300008: Object 13
+    2300010: Object 14
+    2300012: Object 15
+    2300014: Object 16
+    2300016: Object 17
+    2300018: Object 18
+    2300020: Object 19
+    2300022: Object 20
+    2300024: Object 21
+    2300026: Object 22
+    2300028: Object 23
+    2300030: Object 24
+    2300032: Object 25
+    2300034: Object 26
+    2300036: Object 27
+    2300038: Object 28
+    2300040: Object 29
+    2300042: Object 3
+    2300044: Object 30
+    2300046: Object 31
+    2300048: Object 4
+    2300050: Object 6
+    2300052: Object 7
+    2300054: Object 8
+    2300056: Object 9
+    2300058: Object002
+    2300060: Object003
+    2300062: Object007
+    2300064: Object008
+    2300066: Object009
+    3300000: Line001
+    3300002: Object 10
+    3300004: Object 11
+    3300006: Object 12
+    3300008: Object 13
+    3300010: Object 14
+    3300012: Object 15
+    3300014: Object 16
+    3300016: Object 17
+    3300018: Object 18
+    3300020: Object 19
+    3300022: Object 20
+    3300024: Object 21
+    3300026: Object 22
+    3300028: Object 23
+    3300030: Object 24
+    3300032: Object 25
+    3300034: Object 26
+    3300036: Object 27
+    3300038: Object 28
+    3300040: Object 29
+    3300042: Object 3
+    3300044: Object 30
+    3300046: Object 31
+    3300048: Object 4
+    3300050: Object 6
+    3300052: Object 7
+    3300054: Object 8
+    3300056: Object 9
+    3300058: Object002
+    3300060: Object003
+    3300062: Object007
+    3300064: Object008
+    3300066: Object009
+    4300000: Object
+    4300002: Object
+    4300004: Object
+    4300006: Object
+    4300008: Object
+    4300010: Object
+    4300012: Object
+    4300014: Object
+    4300016: Object
+    4300018: Object
+    4300020: Object
+    4300022: Object
+    4300024: Object
+    4300026: Object
+    4300028: Object
+    4300030: Object
+    4300032: Object
+    4300034: Object
+    4300036: Object
+    4300038: Object
+    4300040: Object
+    4300042: Object
+    4300044: Object
+    4300046: Object
+    4300048: Object
+    4300050: Object
+    4300052: Object
+    4300054: Object002
+    4300056: Object
+    4300058: Line001
+    4300060: Object003
+    4300062: Object007
+    4300064: Object008
+    4300066: Object009
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
