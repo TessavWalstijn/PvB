@@ -66,7 +66,8 @@ public class _baseTower : MonoBehaviour
 
         Vector3 dir = _enemy.transform.position - _turretHead.transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
-        Quaternion rotation = Quaternion.Lerp(_turretHead.transform.rotation, lookRotation, Time.deltaTime * _turnSpeed); 
+        Quaternion rotation = Quaternion.Lerp(_turretHead.transform.rotation, lookRotation, Time.deltaTime * _turnSpeed);
+        _turretHead.gameObject.transform.rotation = rotation;
     }
       
     void OnTriggerEnter(Collider other)

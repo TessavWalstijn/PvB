@@ -115,7 +115,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1004131372056867979}
+      - m_Target: {fileID: 0}
         m_MethodName: RadialRightButton
         m_Mode: 1
         m_Arguments:
@@ -214,7 +214,6 @@ GameObject:
   - component: {fileID: 1004131372056867982}
   - component: {fileID: 1004131372056867976}
   - component: {fileID: 1004131372056867977}
-  - component: {fileID: 1004131372056867979}
   m_Layer: 5
   m_Name: BuiltTowerRadialMenu
   m_TagString: Untagged
@@ -282,24 +281,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &1004131372056867979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1004131372056867983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca749a839c5c0c54ea757bcf98c118e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rapidFireTower: {fileID: 0}
-  _areaOfEffectTower: {fileID: 0}
-  _slowTower: {fileID: 0}
-  _currentTower: {fileID: 0}
-  _plot: {fileID: 0}
-  scaleModifier: 0
 --- !u!1 &1004131372310655897
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,7 +396,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1004131372056867979}
+      - m_Target: {fileID: 0}
         m_MethodName: RadialBottomButton
         m_Mode: 1
         m_Arguments:
@@ -543,7 +524,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1004131372056867979}
+      - m_Target: {fileID: 0}
         m_MethodName: RadialTopButton
         m_Mode: 1
         m_Arguments:
@@ -821,7 +802,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1004131372056867979}
+      - m_Target: {fileID: 0}
         m_MethodName: RadialLeftButton
         m_Mode: 1
         m_Arguments:
