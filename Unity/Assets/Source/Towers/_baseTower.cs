@@ -49,7 +49,6 @@ public class _baseTower : MonoBehaviour
         }else
         {
             _enemy = null;
-            Vector3.Lerp(new Vector3(_turretHead.transform.rotation.x, _turretHead.transform.rotation.y, _turretHead.transform.rotation.z), _startRotation, Time.deltaTime * _turnSpeed);
         }
 
         if(_fireCountdown <= 0f)
