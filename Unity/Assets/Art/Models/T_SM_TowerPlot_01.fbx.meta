@@ -33,7 +33,12 @@ ModelImporter:
     2300000: pCube283
     3300000: pCube283
     4300000: pCube283
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 443a7267be7df2b4b85313153c1b94b3, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -73,7 +78,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
