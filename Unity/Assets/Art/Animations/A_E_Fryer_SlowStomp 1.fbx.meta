@@ -1,62 +1,35 @@
 fileFormatVersion: 2
-guid: e0f7fbc015217c54ca93389db72fbc75
+guid: c12e85e4efb888549863b2296488a056
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: ControlRig
-    100004: KELLOC
-    100006: l_KellocArms_ClavicleSHJnt
-    100008: l_KellocArms_ElbowSHJnt
-    100010: l_KellocArms_ShoulderSHJnt
-    100012: l_KellocArms_WristSHJnt
-    100014: l_KellocLeg_AnkleSHJnt
-    100016: l_KellocLeg_BallSHJnt
-    100018: l_KellocLeg_HipSHJnt
-    100020: l_KellocLeg_KneeSHJnt
-    100022: l_KellocLeg_ToeSHJnt
-    100024: r_KellocArms_ClavicleSHJnt
-    100026: r_KellocArms_ElbowSHJnt
-    100028: r_KellocArms_ShoulderSHJnt
-    100030: r_KellocArms_WristSHJnt
-    100032: r_KellocLeg_AnkleSHJnt
-    100034: r_KellocLeg_BallSHJnt
-    100036: r_KellocLeg_HipSHJnt
-    100038: r_KellocLeg_KneeSHJnt
-    100040: r_KellocLeg_ToeSHJnt
-    100042: ROOTSHJnt
-    100044: SHJntGrp
-    100046: Spine_01SHJnt
-    100048: Spine_TopSHJnt
+    100002: Arm_ClavicleSHJnt
+    100004: Arm_ElbowSHJnt
+    100006: Arm_ShoulderSHJnt
+    100008: Arm_WristSHJnt
+    100010: ControlRig
+    100012: Fryer1
+    100014: ROOTSHJnt
+    100016: SHJntGrp
+    100018: Spine_01SHJnt
+    100020: Spine_TopSHJnt
     400000: //RootNode
-    400002: ControlRig
-    400004: KELLOC
-    400006: l_KellocArms_ClavicleSHJnt
-    400008: l_KellocArms_ElbowSHJnt
-    400010: l_KellocArms_ShoulderSHJnt
-    400012: l_KellocArms_WristSHJnt
-    400014: l_KellocLeg_AnkleSHJnt
-    400016: l_KellocLeg_BallSHJnt
-    400018: l_KellocLeg_HipSHJnt
-    400020: l_KellocLeg_KneeSHJnt
-    400022: l_KellocLeg_ToeSHJnt
-    400024: r_KellocArms_ClavicleSHJnt
-    400026: r_KellocArms_ElbowSHJnt
-    400028: r_KellocArms_ShoulderSHJnt
-    400030: r_KellocArms_WristSHJnt
-    400032: r_KellocLeg_AnkleSHJnt
-    400034: r_KellocLeg_BallSHJnt
-    400036: r_KellocLeg_HipSHJnt
-    400038: r_KellocLeg_KneeSHJnt
-    400040: r_KellocLeg_ToeSHJnt
-    400042: ROOTSHJnt
-    400044: SHJntGrp
-    400046: Spine_01SHJnt
-    400048: Spine_TopSHJnt
-    2100000: lambert6
-    4300000: KELLOC
+    400002: Arm_ClavicleSHJnt
+    400004: Arm_ElbowSHJnt
+    400006: Arm_ShoulderSHJnt
+    400008: Arm_WristSHJnt
+    400010: ControlRig
+    400012: Fryer1
+    400014: ROOTSHJnt
+    400016: SHJntGrp
+    400018: Spine_01SHJnt
+    400020: Spine_TopSHJnt
+    2100000: Assesoires
+    2100002: Fryer
+    4300000: Fryer1
     9500000: //RootNode
-    13700000: KELLOC
+    13700000: Fryer1
   externalObjects: {}
   materials:
     importMaterials: 1
