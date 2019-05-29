@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyDamage : MonoBehaviour
 {
     private bool _dead = false;
+
+    [SerializeField] private Image _gameOverScreen;
 
     [SerializeField]
     private int _damage = 100;
@@ -22,6 +25,9 @@ public class EnemyDamage : MonoBehaviour
     {
         _baseHealth = _baseObject.GetComponent<Health>();
         _enemyHealth = gameObject.GetComponent<Health>();
+
+        _gameOverScreen = GameObject.Find("GameOver").GetComponent<Image>();
+        _gameOverScreen.enabled = false;
     }
 
     // Update is called once per frame
@@ -51,6 +57,7 @@ public class EnemyDamage : MonoBehaviour
             } else {
                 // TODO: Add Game OVER
                 Debug.Log("Game over");
+                _gameOverScreen.enabled = true;
             }
 
             yield return new WaitForSeconds(time);

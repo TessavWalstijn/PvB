@@ -5,13 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/Robbert_Test.unity
-    guid: 805e14128812cac4ea638fd0c1846c01
   - enabled: 1
-    path: Assets/Scenes/PlaneDetectionScene.unity
-    guid: 6a2c002b532b49246b8ceacbd68015ec
+    path: Assets/Scenes/Peije_Test.unity
+    guid: e2228e3f444b51641b1b0b258f1bf2af
   m_configObjects: {}

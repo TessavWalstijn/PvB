@@ -8,7 +8,6 @@ public class RadialMenuButtons : MonoBehaviour
     [Header("Towers")]
     [SerializeField] private GameObject _rapidFireTower;
     [SerializeField] private GameObject _areaOfEffectTower;
-    [SerializeField] private GameObject _slowTower;
 
     // Referentie naar de tower die op dat moment gebouwd is
     [SerializeField] private GameObject _currentTower;
@@ -33,7 +32,7 @@ public class RadialMenuButtons : MonoBehaviour
 
    public void RadialTopButton()        // Button functie voor het instantiëren
    {
-       InstantiateTower(_rapidFireTower);
+       _plotScript.GetComponent<SelectPlot>().DisablePlot();
    }
 
    public void RadialBottomButton()     // Button functie voor het instantiëren
@@ -43,15 +42,15 @@ public class RadialMenuButtons : MonoBehaviour
 
    public void RadialRightButton()      // Button functie voor sluiten van de UI
    {
-       _plotScript.GetComponent<SelectPlot>().DisablePlot();
+       InstantiateTower(_areaOfEffectTower);
    }
 
    public void RadialLeftButton()       // Button functie voor het instantiëren
    {
-       InstantiateTower(_areaOfEffectTower);
+       InstantiateTower(_rapidFireTower);
    }
 
-   public void BuiltTowerRadialRightButton()        // Button functie voor het weghalen van de tower die op dat moment staat op de plot
+   public void BuiltTowerRadialBottomButton()        // Button functie voor het weghalen van de tower die op dat moment staat op de plot
    {
        Destroy(_currentTower.gameObject);
        _plotScript.GetComponent<SelectPlot>().DisablePlot();

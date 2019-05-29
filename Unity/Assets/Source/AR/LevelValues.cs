@@ -20,7 +20,7 @@ public class LevelValues : MonoBehaviour
     public float sliderScale;
 
 
-   private void Awake()
+   private void Start()
    {
         // Verbergt het level en de UI van de game
         _level.SetActive(false);
