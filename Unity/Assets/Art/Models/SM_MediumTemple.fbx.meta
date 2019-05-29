@@ -243,7 +243,12 @@ ModelImporter:
     4300076: pCube41
     4300078: pCube42
     4300080: pCube41
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Big_Temple
+    second: {fileID: 2100000, guid: 0928aa4953afcb5408ae38fff66e8b68, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
