@@ -15,6 +15,7 @@
             "."
         ],
         "fbxSavePaths": [
+            "Art/Models",
             "."
         ],
         "selectedFbxPath": 0,
