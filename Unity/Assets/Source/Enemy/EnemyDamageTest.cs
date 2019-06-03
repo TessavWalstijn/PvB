@@ -1,13 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyDamageTest : MonoBehaviour
 {
-    [SerializeField]
     private GameObject _baseObject;
-
-    [SerializeField]
     private GameObject _enemyObject;
 
     [SerializeField] 

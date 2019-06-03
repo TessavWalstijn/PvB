@@ -8,6 +8,7 @@ TagManager:
   - ManipulationSystem
   - Enemy
   - Building
+  - Base
   layers:
   - Default
   - TransparentFX
