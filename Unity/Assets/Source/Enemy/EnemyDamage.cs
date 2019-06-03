@@ -10,7 +10,7 @@ public class EnemyDamage : MonoBehaviour
     [SerializeField] private Image _gameOverScreen;
 
     [SerializeField]
-    private int _damage = 100;
+    private int _damage = 20;
 
     [SerializeField]
     private int _attackTime = 2;
@@ -27,7 +27,11 @@ public class EnemyDamage : MonoBehaviour
         _enemyHealth = gameObject.GetComponent<Health>();
 
         _gameOverScreen = GameObject.Find("GameOver").GetComponent<Image>();
-        _gameOverScreen.enabled = false;
+        
+        if(_baseHealth.currentHealth != 0)
+            _gameOverScreen.enabled = false;
+
+        Debug.Log(_baseHealth.currentHealth);
     }
 
     // Update is called once per frame

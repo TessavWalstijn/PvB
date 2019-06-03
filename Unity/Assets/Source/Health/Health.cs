@@ -8,6 +8,11 @@ public class Health : MonoBehaviour
     // Boolean die registreert of de vijand levend of dood is
     private bool objectIsDead = false;
 
+    void Start()
+    {
+        Debug.Log(gameObject.name + " heeft: " + currentHealth + " levenspunten");
+    }
+
     void Update()
     {
         if(currentHealth <= 0)

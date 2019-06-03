@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 36558161568441740}
   - component: {fileID: 4481033121410084578}
   - component: {fileID: 4407035768627032459}
-  - component: {fileID: 6869351412178524035}
+  - component: {fileID: 1725748027909524818}
   m_Layer: 0
   m_Name: EnemyNormal
   m_TagString: Enemy
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 3
---- !u!114 &6869351412178524035
+--- !u!114 &1725748027909524818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -301,14 +301,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5493976373166188536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f5048418244ae4419c27d69e3ce614b, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a925a3f79ed6e5489a3a122b7d784da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameOverScreen: {fileID: 0}
-  _damage: 10
-  _attackTime: 2
-  _baseObject: {fileID: 8631226318633352798, guid: ab16acba5f5fc674c94e6feba24d8c6b,
-    type: 3}
+  _baseObject: {fileID: 0}
+  _enemyObject: {fileID: 0}
+  _damage: 20
 --- !u!1 &5953454683054361777
 GameObject:
   m_ObjectHideFlags: 0
