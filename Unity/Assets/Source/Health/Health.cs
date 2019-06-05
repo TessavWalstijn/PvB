@@ -8,11 +8,12 @@ public class Health : MonoBehaviour
     // Boolean die registreert of de vijand levend of dood is
     private bool objectIsDead = false;
 
-    void Start()
-    {
-        Debug.Log(gameObject.name + " heeft: " + currentHealth + " levenspunten");
-    }
-
+    /**
+     * <summary>
+     * Update functie die bijhoudt wanneer de levenspunten op 0 komen.
+     * </summary>
+     * <returns></returns>
+     */
     void Update()
     {
         if(currentHealth <= 0)
@@ -22,19 +23,38 @@ public class Health : MonoBehaviour
         }
     }
 
-    void RemoveGameObjectFromList()     // Functie die aangeeft of de vijand vernietigd kan worden
+    /**
+     * <summary>
+     * Functie die aangeeft of de vijand vernietigd kan worden
+     * </summary>
+     * <returns></returns>
+     */
+    void RemoveGameObjectFromList()
     {
         objectIsDead = true;
 
         Invoke("Death", 0.2f);
     }
 
+    /**
+     * <summary>
+     * Verwijderd het gameobject van de scene
+     * </summary>
+     * <returns></returns>
+     */
     void Death()
     {
-        Destroy(gameObject);        // Verwijderd het gameobject van de scene
+        Destroy(gameObject);        
     }
 
-    void OnTriggerStay(Collider other)      // Functie om te registreren of er een object in de collider blijft
+    /**
+     * <summary>
+     * Functie om te registreren of er een object in de collider blijft
+     * </summary>
+     * <param name="other">other is hier het gameobject wat botsts met de collider van dit gameobject en een tag heeft met 'Tower'</param>
+     * <returns></returns>
+     */
+    void OnTriggerStay(Collider other)      
     {
         if(other.gameObject.tag == "Tower")     // Checkt of er objecten in de collider zitten met de tag: Tower
         {

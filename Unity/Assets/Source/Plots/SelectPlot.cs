@@ -12,6 +12,12 @@ public class SelectPlot : MonoBehaviour
     // Boolean om bij te houden of er wel of niet gebouwd is op een plot
     public bool plotHasBuilding = false;
 
+    /**
+     * <summary>
+     * Start functie dat de menu's uitzet wanneer de game start
+     * </summary>
+     * <returns></returns>
+     */
     void Start()
     {
         // Zet de UI menu's uit als de game wordt opgestart
@@ -19,7 +25,12 @@ public class SelectPlot : MonoBehaviour
         _builtTowerRadialMenu.SetActive(false);
     }
 
-    public void EnablePlot()        // Functie om de plot aan te zetten als een plot geselecteerd wordt
+    /**
+     * <summary>
+     * Functie om de plot aan te zetten als een plot geselecteerd wordt
+     * </summary>
+     */
+    public void EnablePlot()        
     {
         if(!plotHasBuilding)
             _radialMenu.SetActive(true);
@@ -28,7 +39,12 @@ public class SelectPlot : MonoBehaviour
             _builtTowerRadialMenu.SetActive(true);
     }
 
-    public void DisablePlot()       // Functie om de plot uit te zetten als een plot gedeselecteerd wordt
+    /**
+     * <summary>
+     * Functie om de plot uit te zetten als een plot gedeselecteerd wordt
+     * </summary>
+     */
+    public void DisablePlot()       
     {
         if(!plotHasBuilding)
             _radialMenu.SetActive(false);

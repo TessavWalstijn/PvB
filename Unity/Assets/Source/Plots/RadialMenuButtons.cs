@@ -19,46 +19,86 @@ public class RadialMenuButtons : MonoBehaviour
     // Referentie naar het script: SelectPlot
     private SelectPlot _plotScript;
 
+    private GameObject _resourceManager;
+
     // Referentie naar de schaling van de UI slider, om de objecten te spawnen met het juiste formaat.
     [Header("Other Variables")]
     public float scaleModifier;
 
+    /**
+     * <summary>
+     * Start functie om de waardes uit verschillende scripts op te slaan als referentie
+     * </summary>
+     * <returns></returns>
+     */
     void Start()
     {
         scaleModifier = GameObject.Find("LevelHolder").GetComponent<LevelValues>().sliderScale;
+        _resourceManager = GameObject.Find("GameManager");
 
         _plotScript = _plot.GetComponent<SelectPlot>();
     }
 
-   public void RadialTopButton()        // Button functie voor het instantiëren
-   {
+    /**
+     * <summary>
+     * Button functie voor sluiten van de UI menu
+     * </summary>
+     */
+    public void DisablePlotUI()     
+    {
        _plotScript.GetComponent<SelectPlot>().DisablePlot();
-   }
+    }    
 
-   public void RadialBottomButton()     // Button functie voor het instantiëren
-   {
-       _plotScript.GetComponent<SelectPlot>().DisablePlot();
-   }
+    /**
+     * <summary>
+     * // Button functie voor het instantiëren van een tower
+     * </summary>
+     */
+    public void InstantiateAOETower()      
+    {
+       if(_resourceManager.GetComponent<Resources>().resourceCounter >= 5)
+       {
+           InstantiateTower(_areaOfEffectTower);
+           _resourceManager.GetComponent<Resources>().resourceCounter -= 5;
+       }
+    }
 
-   public void RadialRightButton()      // Button functie voor sluiten van de UI
-   {
-       InstantiateTower(_areaOfEffectTower);
-   }
+    /**
+     * <summary>
+     * Button functie voor het instantiëren van een tower
+     * </summary>
+     */
+    public void InstantiateRapidFireTower()       
+    {
+       if(_resourceManager.GetComponent<Resources>().resourceCounter >= 5)
+       {
+           InstantiateTower(_rapidFireTower);
+           _resourceManager.GetComponent<Resources>().resourceCounter -= 5;
+       }
+       
+    }
 
-   public void RadialLeftButton()       // Button functie voor het instantiëren
-   {
-       InstantiateTower(_rapidFireTower);
-   }
-
-   public void BuiltTowerRadialBottomButton()        // Button functie voor het weghalen van de tower die op dat moment staat op de plot
-   {
+    /**
+     * <summary>
+     * Button functie voor het weghalen van de tower die op dat moment staat op de plot
+     * </summary>
+     */
+    public void DestroyBuiltTower()
+    {
        Destroy(_currentTower.gameObject);
+       _resourceManager.GetComponent<Resources>().resourceCounter += 3;
        _plotScript.GetComponent<SelectPlot>().DisablePlot();
        _plotScript.GetComponent<SelectPlot>().plotHasBuilding = false;
-   }
+    }
 
-   private void InstantiateTower(GameObject tower)      // Functie om de juiste tower de instantiëren op de plek van het geselecteerde plot
-   {
+    /**
+     * <summary>
+     * Functie om de juiste tower de instantiëren op de plek van het geselecteerde plot
+     * </summary>
+     * <param name="tower">de tower refereert naar het object van de instantiate functie</param>
+     */
+    private void InstantiateTower(GameObject tower)      
+    {
         GameObject _newTower = Instantiate(tower, _plot.transform.position, _plot.transform.rotation);
         _newTower.transform.localScale = new Vector3(_newTower.transform.localScale.x * scaleModifier, _newTower.transform.localScale.y * scaleModifier, _newTower.transform.localScale.z * scaleModifier);
         _newTower.transform.parent = _plot.transform;
@@ -67,5 +107,5 @@ public class RadialMenuButtons : MonoBehaviour
 
        _plotScript.GetComponent<SelectPlot>().DisablePlot();
        _plotScript.GetComponent<SelectPlot>().plotHasBuilding = true;
-   }
+    }
 }

@@ -26,6 +26,12 @@ public class ARController : MonoBehaviour
     }
 
     // Update is called once per frame
+    /**
+     * <summary>
+     * Update class checkt voor interactie van de speler met de planes en zet een object neer op de plek van de interactie
+     * </summary>
+     * <returns></returns>
+     */
     void Update()
     {
         //check ARCore session status.

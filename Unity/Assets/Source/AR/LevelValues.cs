@@ -19,7 +19,11 @@ public class LevelValues : MonoBehaviour
     private float _sliderRotation;
     public float sliderScale;
 
-
+    /**
+     * <summary>
+     * Zet de UI goed neer voor het starten van het spel
+     * </summary>
+     */
    private void Start()
    {
         // Verbergt het level en de UI van de game
@@ -38,7 +42,13 @@ public class LevelValues : MonoBehaviour
         _sliderRotation = _rotationSlider.value;
    }
 
-   private void SliderRotation(float _value)    // Functie om het gameobject te draaien met behulp van de slider
+    /**
+     * <summary>
+     * Functie om het gameobject te draaien met behulp van de slider
+     * </summary>
+     * <param name="_value">Referentie naar de slider value om de waarde op te slaan</param>
+     */
+   private void SliderRotation(float _value)    
    {
        float delta = _value - _sliderRotation;
        _object.transform.Rotate(Vector3.up * delta * 360);
@@ -46,7 +56,13 @@ public class LevelValues : MonoBehaviour
        _sliderRotation = _value;
    }
 
-   private void SliderScaling(float _value)     // Functie om het gameobject te schalen met behulp van de slider
+    /**
+     * <summary>
+     * Functie om het gameobject te schalen met behulp van de slider
+     * </summary>
+     * <param name="_value">Referentie naar de slider value om de waarde op te slaan</param>
+     */
+   private void SliderScaling(float _value)     
    {
        float delta = _value - sliderScale;
        _object.transform.localScale = new Vector3(1,1,1) * _value;
@@ -54,7 +70,12 @@ public class LevelValues : MonoBehaviour
        sliderScale = _value;
    }
 
-    public void AcceptButton()      // Functie om de slider UI weg te halen en het level met UI te activeren.
+    /**
+     * <summary>
+     * Functie om de slider UI weg te halen en het level met UI te activeren.
+     * </summary>
+     */
+    public void AcceptButton()      
     {
         _level.SetActive(true);
         _base.SetActive(false);

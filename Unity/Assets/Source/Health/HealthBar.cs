@@ -14,12 +14,24 @@ public class HealthBar : MonoBehaviour
     [SerializeField]
     private GameObject _baseHealth;
 
+    /**
+     * <summary>
+     * Start functie om te zoeken naar de gameobjecten.
+     * </summary>
+     * <returns></returns>
+     */
     void Start()
     {
         _baseHealth = GameObject.Find("BaseHealth");
         _gameOverScreen = GameObject.Find("GameOver");
     }
 
+    /**
+     * <summary>
+     * Update functie om de healthbar van je basis te vullen met het aantal levenspunten dat het op dat moment bezit.
+     * </summary>
+     * <returns></returns>
+     */
     void Update()
     {
         float healthFloat = (Mathf.Round(_baseHealth.GetComponent<Health>().currentHealth) / 100);

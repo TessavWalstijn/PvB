@@ -7,12 +7,24 @@ public class AoEBullet : MonoBehaviour
     [SerializeField] private Transform[] _spawnLocations;
     [SerializeField] private GameObject[] hitboxHolders;
 
+    /**
+     * <summary>
+     * Start de coroutines op het moment dat het object wordt ingeladen
+     * </summary>
+     * <returns></returns>
+     */
     void Start()
     {
         StartCoroutine(StartBulletTimer());
         StartCoroutine(EnableHitbox());
     }
 
+    /**
+     * <summary>
+     * Zorgt ervoor de explosie animatie op de correcte manier wordt afgespeeld
+     * </summary>
+     * <returns></returns>
+     */
     IEnumerator StartBulletTimer()
     {
         for(int i = 0; i < 3; i++)
@@ -29,6 +41,12 @@ public class AoEBullet : MonoBehaviour
         }
     }
 
+    /**
+     * <summary>
+     * Zorgt ervoor de colliders die enemies detecteren tijdens de explosies aangezet worden
+     * </summary>
+     * <returns></returns>
+     */
     IEnumerator EnableHitbox()
     {
         yield return new WaitForSeconds(0.5f);

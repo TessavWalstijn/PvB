@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2920016483956383797}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5671817608469365023}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Arms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4655366430869966493}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Kimpie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 999880284127737424}
   - component: {fileID: 6020148201063450641}
   - component: {fileID: 340424647998616472}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Robot_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3037700822882535797}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: transform2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 4481033121410084578}
   - component: {fileID: 4407035768627032459}
   - component: {fileID: 1725748027909524818}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EnemyNormal
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -304,9 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a925a3f79ed6e5489a3a122b7d784da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _baseObject: {fileID: 0}
-  _enemyObject: {fileID: 0}
-  _damage: 20
+  _damage: 10
 --- !u!1 &5953454683054361777
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2262498651027986505}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Robot_011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +347,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3158687716574483042}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: transform1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +377,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4286950284049765317}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: transform3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

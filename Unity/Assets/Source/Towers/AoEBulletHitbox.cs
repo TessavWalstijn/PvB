@@ -5,6 +5,13 @@ public class AoEBulletHitbox : MonoBehaviour
 {
     public int damage;
 
+    /**
+     * <summary>
+     * Functie om de data uit de colliders te halen en de damage toe te voegen
+     * </summary>
+     * <param name="other"></param>
+     * <returns></returns>
+     */
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Enemy")

@@ -12,16 +12,25 @@ public class ProjectingCursor : MonoBehaviour {
 	// Boolean om te registreren of er wel of niet een gebouw is geraakt met de cursor
 	private bool _hitBuilding = false;
 
+	/**
+	 * <summary>
+	 * Start Functie om de cursor te zoeken
+	 * </summary>
+	 * <returns></returns>
+	 */
 	void Start()
 	{
 		// Referentie naar het cursor object wat geprojecteerd wordt op het speelveld, wat niet weergegeven wordt tot het cursor op een oppervlakte komt
 		_cursor = GameObject.Find("CursorHolder");
 		_cursor.SetActive(false);
-
-		// Zet het selectieknop uit tot het plot raakt
-		_selectButton.SetActive(false);
 	}
 
+	/**
+	 * <summary>
+	 * Deze update functie zorgt ervoor dat er elke frame geregistreerd wordt waar je naar kijkt door middel van een raycast
+	 * </summary>
+	 * <returns></returns>
+	 */
 	void Update()		
 	{
 		// Referentie naar de ray, die van de main camera kijkt

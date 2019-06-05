@@ -16,14 +16,8 @@ public class EnemyMovement : MonoBehaviour
     private Transform[] _targets;
     private int _location = 1;
     private bool _move = false;
-    private EnemyDamage _damage;
 
     private string _side = "left";
-
-    void Start()
-    {
-        _damage = gameObject.GetComponent<EnemyDamage>();
-    }
 
     // Update is called once per frame
     void Update()
@@ -56,7 +50,6 @@ public class EnemyMovement : MonoBehaviour
             if (_location >= _targets.Length) {
                 _location = 1;
                 _move = false;
-                _damage.StartDamage();
             }
         }
     }

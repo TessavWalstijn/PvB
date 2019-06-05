@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1172932555704340045}
   - component: {fileID: 6555284884934931270}
   - component: {fileID: 3055449159628226839}
-  - component: {fileID: 920570338281769890}
   - component: {fileID: 7645482479665855891}
-  m_Layer: 0
+  - component: {fileID: 2543404671722275079}
+  m_Layer: 2
   m_Name: EnemyLarge
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -86,23 +86,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 3
---- !u!114 &920570338281769890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913865514569620762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f5048418244ae4419c27d69e3ce614b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gameOverScreen: {fileID: 0}
-  _damage: 10
-  _attackTime: 3
-  _baseObject: {fileID: 8631226318633352798, guid: ab16acba5f5fc674c94e6feba24d8c6b,
-    type: 3}
 --- !u!114 &7645482479665855891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +99,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 160
+--- !u!114 &2543404671722275079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913865514569620762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a925a3f79ed6e5489a3a122b7d784da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 15
 --- !u!1 &2368172112000619026
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +123,7 @@ GameObject:
   - component: {fileID: 8387647379927022442}
   - component: {fileID: 9088291162768428413}
   - component: {fileID: 7476346035429651682}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Chicken_Leg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +200,7 @@ GameObject:
   - component: {fileID: 1078880671471975036}
   - component: {fileID: 4253951897150354102}
   - component: {fileID: 48797615935085471}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Chicken_Leg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +277,7 @@ GameObject:
   - component: {fileID: 4043412212917912670}
   - component: {fileID: 5063376439061470324}
   - component: {fileID: 1023742868728341787}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Chicken_Wing_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,7 +354,7 @@ GameObject:
   - component: {fileID: 2337191979058689705}
   - component: {fileID: 2558815398004563792}
   - component: {fileID: 4725561391508270505}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SK_BigEnemy_Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +429,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7307716095162213553}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Enemy_Chicken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -470,7 +466,7 @@ GameObject:
   - component: {fileID: 1418506205741626897}
   - component: {fileID: 4486962773551167279}
   - component: {fileID: 8247322342008759704}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SK_BigEnemy_LowerArm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,7 +543,7 @@ GameObject:
   - component: {fileID: 4025049660862405361}
   - component: {fileID: 5795692876001891844}
   - component: {fileID: 6098632116221017326}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Chicken_Body2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,7 +620,7 @@ GameObject:
   - component: {fileID: 2241132263262341651}
   - component: {fileID: 8717131064698366563}
   - component: {fileID: 6072239549859962619}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SK_BigEnemy_TopHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,7 +697,7 @@ GameObject:
   - component: {fileID: 4766289708106649861}
   - component: {fileID: 28680171872831298}
   - component: {fileID: 632549930614368491}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SK_BigEnemy_LowerHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -778,7 +774,7 @@ GameObject:
   - component: {fileID: 5033577518872750818}
   - component: {fileID: 1621945061698110873}
   - component: {fileID: 4368032104143300869}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SK_BigEnemy_LowerArm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -855,7 +851,7 @@ GameObject:
   - component: {fileID: 8667960242556797662}
   - component: {fileID: 4105824693925670588}
   - component: {fileID: 1813976684893840294}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SK_BigEnemy_UpperArm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -932,7 +928,7 @@ GameObject:
   - component: {fileID: 4535046672933557232}
   - component: {fileID: 2153791529384175538}
   - component: {fileID: 6222757661586304567}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Chicken_Wing_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1009,7 +1005,7 @@ GameObject:
   - component: {fileID: 3338678134507907711}
   - component: {fileID: 8557485003362752878}
   - component: {fileID: 6920403418587012754}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SK_BigEnemy_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1086,7 +1082,7 @@ GameObject:
   - component: {fileID: 208545511267178976}
   - component: {fileID: 4247041819246951257}
   - component: {fileID: 4866144007851626425}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SK_BigEnemy_UpperArm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
