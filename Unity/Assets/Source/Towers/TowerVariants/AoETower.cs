@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AoETower : _baseTower
+public class AoETower : BaseTower
 {
     [SerializeField] private GameObject AoETowerImpact;
 

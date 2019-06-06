@@ -51,7 +51,7 @@ public class RadialMenuButtons : MonoBehaviour
 
     /**
      * <summary>
-     * // Button functie voor het instantiëren van een tower
+     * // Button functie voor het instantiëren van de area of effect tower
      * </summary>
      */
     public void InstantiateAOETower()      
@@ -65,7 +65,7 @@ public class RadialMenuButtons : MonoBehaviour
 
     /**
      * <summary>
-     * Button functie voor het instantiëren van een tower
+     * Button functie voor het instantiëren van de rapidfire tower
      * </summary>
      */
     public void InstantiateRapidFireTower()       

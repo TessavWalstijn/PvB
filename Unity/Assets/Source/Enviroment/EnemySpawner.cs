@@ -168,7 +168,7 @@ public class EnemySpawner : MonoBehaviour
         if (_waves == _unlockBotLane) { _botRoad = true; }
         if (_waves == _unlockHeavyEnemy) { _enemyUnlock = true; }
         if (_waves == _winGame) {
-            Debug.Log("Waves ended");
+            //Debug.Log("Waves ended");
             _finalWave = true;
         }
     }

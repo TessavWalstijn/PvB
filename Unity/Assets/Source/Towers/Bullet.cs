@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class _bullet : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
     private GameObject _target;
     protected private float _speed = 0.3f;
@@ -16,7 +16,7 @@ public class _bullet : MonoBehaviour
      */
     void Start()
     {
-      _baseTower _enemy = new _baseTower(); 
+      BaseTower _enemy = new BaseTower(); 
 
         Destroy(gameObject, 4f);
     }

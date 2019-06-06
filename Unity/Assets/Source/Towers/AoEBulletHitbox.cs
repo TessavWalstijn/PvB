@@ -16,10 +16,10 @@ public class AoEBulletHitbox : MonoBehaviour
     {
         if(other.gameObject.tag == "Enemy")
         {
-            Debug.Log(damage);
+            //Debug.Log(damage);
 
             other.GetComponent<Health>().currentHealth -= damage;
-            Debug.Log(other.GetComponent<Health>().currentHealth);
+            //Debug.Log(other.GetComponent<Health>().currentHealth);
             
             //List<GameObject> enemyList = transform.GetComponentInParent<_baseTower>().enemiesInCollider;
             //enemyList.Remove(other.gameObject);

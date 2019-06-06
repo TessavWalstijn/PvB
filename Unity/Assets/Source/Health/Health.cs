@@ -6,7 +6,7 @@ public class Health : MonoBehaviour
     // Integer om bij te houden hoeveel levenspunten de vijand heeft
     public int currentHealth;
     // Boolean die registreert of de vijand levend of dood is
-    private bool objectIsDead = false;
+    private bool _objectIsDead = false;
 
     /**
      * <summary>
@@ -31,7 +31,7 @@ public class Health : MonoBehaviour
      */
     void RemoveGameObjectFromList()
     {
-        objectIsDead = true;
+        _objectIsDead = true;
 
         Invoke("Death", 0.2f);
     }
@@ -58,10 +58,10 @@ public class Health : MonoBehaviour
     {
         if(other.gameObject.tag == "Tower")     // Checkt of er objecten in de collider zitten met de tag: Tower
         {
-            if(objectIsDead)
+            if(_objectIsDead)
             {
                 // Als het gameobject levenspunten heeft van 0 of lager, verwijder dit object uit de lijst van geregistreerde vijanden van de torens die de vijand gezien hebben
-                other.GetComponent<_baseTower>().enemiesInCollider.Remove(gameObject);
+                other.GetComponent<BaseTower>().enemiesInCollider.Remove(gameObject);
             }
         }
     }

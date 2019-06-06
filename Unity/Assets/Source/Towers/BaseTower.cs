@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class _baseTower : MonoBehaviour
+public class BaseTower : MonoBehaviour
 {   
   [Header("LookAt")]
 
