@@ -19,7 +19,12 @@ public class EnemyMovement : MonoBehaviour
 
     private string _side = "left";
 
-    // Update is called once per frame
+    /**
+     * <summary>
+     * Update wordt elke frame aangeroepen
+     * </summary>
+     * <returns></returns>
+     */
     void Update()
     {
         _Move();
@@ -27,14 +32,14 @@ public class EnemyMovement : MonoBehaviour
 
     /**
      * <summary>
-     * Moves the enemy to the next point of the road.
+     * Beweegt de vijand naar het volgende punt op de weg.
      * </summary>
      */
     private void _Move ()
     {
         if (!_move) return;
 
-        float step = _speed * Time.deltaTime * 0.01f; // calculate distance to move
+        float step = _speed * Time.deltaTime * 0.01f; // Bereken afstand om te bewegen
         transform.position = Vector3.MoveTowards(transform.position, _targets[_location].position, step);
         transform.LookAt(_targets[_location]);
         // Vector3 direction = transform.position - _targets[_location].position;
@@ -56,9 +61,9 @@ public class EnemyMovement : MonoBehaviour
 
     /**
      * <summary>
-     * Setup gives the enemy promission to walk the given road.
+     * SetUp geeft de vijand toestemming om te bewegen
      * </summary>
-     * <param name="targets">give the transform array of the road</param>
+     * <param name="targets">geeft de transform array van de weg</param>
      */
     public void SetUp(Transform[] targets)
     {

@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Peije_Test.unity
+    path: Assets/Scenes/Main.unity
     guid: e2228e3f444b51641b1b0b258f1bf2af
   m_configObjects: {}

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Waypoints : MonoBehaviour
 {
-    // All locations of the enemy road.
+    // Alle locaties op de weg
     [SerializeField]
     private GameObject[] _waypoints = new GameObject[15];
     public GameObject[] waypoints { get { return _waypoints; } }
 
-    //#region Number configuration for the roads
+    //#region Number configuratie voor de wegen
     [SerializeField]
     private int[] _topRoadL = new int[8];
     [SerializeField]
@@ -28,11 +28,11 @@ public class Waypoints : MonoBehaviour
 
     /**
      * <summary>
-     * Vigures out the requested road.
+     * Zoekt naar de gevraagde weg
      * </summary>
-     * <param name="road">[int] Give the number of the road: "top = 1", "main = 0" or "bot = 2"</param>
-     * <param name="side">[string] Give the name of the side "left" or "right"</param>
-     * <returns>[Transform[]] Locations to walk through</returns>
+     * <param name="road">[int] Geef het nummer van de weg: "top = 1", "main = 0" of "bot = 2"</param>
+     * <param name="side">[string] Geef de naam van de zijde: "left" of "right"</param>
+     * <returns>[Transform[]] Locaties om door te lopen</returns>
      */
     public Transform[] GetEnemyRoad (int road, string side)
     {
@@ -61,10 +61,10 @@ public class Waypoints : MonoBehaviour
 
     /**
      * <summary>
-     * Collects the locations of the road.
+     * Verzameld de locatie van de wegen
      * </summary>
-     * <param name="path">[int[]] numbers representing locations</param>
-     * <returns>[Transform[]] Locations</returns>
+     * <param name="path">[int[]] nummers representeren de weg</param>
+     * <returns>[Transform[]] Locaties</returns>
      */
     private Transform[] _Road(int[] path)
     {

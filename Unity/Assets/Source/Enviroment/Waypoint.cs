@@ -7,12 +7,12 @@ public class Waypoint : MonoBehaviour
     [SerializeField]
     private GameObject _waypoints;
 
-    // Location for the enemy to walk to.
+    // Locatie waar de vijand op loopt
     [SerializeField]
     private Transform _location;
     public Transform location { get { return _location; } }
 
-    // For the user a visual object.
+    // Object voor visuele feedback van de waypoint
     [SerializeField]
     private Transform _visual;
 }
